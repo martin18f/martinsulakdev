@@ -436,7 +436,7 @@ textarea.input{ resize: vertical; }
   .grid.three{ grid-template-columns: 1fr; }
   .grid.two{ grid-template-columns: 1fr; }
   .t-item{ grid-template-columns: 1fr; }
-  .nav{ display:none; } /* jednoduché – na mobile skryté */
+  .nav{ display:none; } 
 }
 
 /* Print */
@@ -446,3 +446,8 @@ textarea.input{ resize: vertical; }
   .card{ box-shadow:none !important; }
   a{ text-decoration:none !important; color: #000 !important; }
 }
+
+.form-status { margin-top: 10px; }
+.form-status.ok { color: rgba(34,197,94,0.95); }
+.form-status.err { color: rgba(245,158,11,0.95); }
+

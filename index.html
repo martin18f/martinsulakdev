@@ -37,7 +37,7 @@
         <a href="#skills">Zručnosti</a>
         <a href="#projekty">Projekty</a>
         <a href="#vzdelanie">Vzdelanie</a>
-        <a href="#praxa">Praxa</a>
+        <a href="#prax">Prax</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
 
@@ -223,8 +223,8 @@
               <li>Mobilná verzia, UX iterácie</li>
             </ul>
             <div class="project-links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Demo (doplň)</a>
-              <a class="link" href="#" target="_blank" rel="noreferrer">Repo (doplň)</a>
+              <a class="link" href="www.ppauto.sk" target="_blank" rel="noreferrer">www.ppauto.sk</a>
+              <a class="link" href="https://github.com/martin18f/ppauto" target="_blank" rel="noreferrer">https://github.com/martin18f/ppauto</a>
             </div>
           </article>
 
@@ -239,8 +239,8 @@
               <li>Nasadenie a README</li>
             </ul>
             <div class="project-links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Demo (doplň)</a>
-              <a class="link" href="https://github.com/martin18f" target="_blank" rel="noreferrer">GitHub</a>
+              <a class="link" href="https://fuely-nine.vercel.app/" target="_blank" rel="noreferrer">https://fuely-nine.vercel.app/</a>
+              <a class="link" href="https://github.com/martin18f/fuely" target="_blank" rel="noreferrer">https://github.com/martin18f/fuely</a>
             </div>
           </article>
 
@@ -294,11 +294,11 @@
     </section>
 
     <!-- PRAX -->
-    <section class="section" id="praxa">
+    <section class="section" id="prax">
       <div class="wrap">
         <div class="section-head">
-          <h2>Praxa</h2>
-          <p class="muted">Keď doplníš konkrétne pozície, prepíšem odrážky na výsledky (achievement-based).</p>
+          <h2>Prax</h2>
+          
         </div>
 
         <div class="grid two">
@@ -325,46 +325,77 @@
 
     <!-- KONTAKT -->
     <section class="section" id="kontakt">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Kontakt</h2>
-          <p class="muted">Verejne odporúčam ponechať len LinkedIn + GitHub. Email/telefón doplníme, až keď chceš.</p>
-        </div>
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Kontakt</h2>
+      
+    </div>
 
-        <div class="grid two">
-          <div class="card">
-            <h3>Odkazy</h3>
-            <div class="contact">
-              <div class="c-row">
-                <span class="c-key">LinkedIn</span>
-                <a class="c-val" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">doplň profil</a>
-              </div>
-              <div class="c-row">
-                <span class="c-key">GitHub</span>
-                <a class="c-val" href="https://github.com/martin18f" target="_blank" rel="noreferrer">martin18f</a>
-              </div>
-              <div class="c-row">
-                <span class="c-key">Email (voliteľné)</span>
-                <span class="c-val">martin [at] domena [dot] sk</span>
-              </div>
-            </div>
+    <div class="grid two">
+      <div class="card">
+        <h3>Odkazy</h3>
+        <div class="contact">
+          <div class="c-row">
+            <span class="c-key">LinkedIn</span>
+            <a class="c-val" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">doplň profil</a>
           </div>
-
-          <div class="card">
-            <h3>Krátka poznámka</h3>
-            <p class="muted">
-              Pre rýchly kontakt preferujem LinkedIn správu. Na vyžiadanie pošlem PDF verziu CV alebo detailnejšie portfólio.
-            </p>
+          <div class="c-row">
+            <span class="c-key">GitHub</span>
+            <a class="c-val" href="https://github.com/martin18f" target="_blank" rel="noreferrer">martin18f</a>
           </div>
         </div>
-
-        <footer class="footer">
-          <span class="muted tiny">© <span id="year"></span> Martin • CV web</span>
-        </footer>
       </div>
-    </section>
+
+      <div class="card">
+        <h3>Kontaktný formulár</h3>
+
+        <form id="contactForm" class="form" autocomplete="on">
+          
+          
+
+          <label class="lbl">
+            Meno
+            <input class="input" name="from_name" placeholder="Tvoje meno" required />
+          </label>
+
+          <label class="lbl">
+            Email
+            <input class="input" name="reply_to" type="email" placeholder="tvoj@email.sk" required />
+          </label>
+
+          <label class="lbl">
+            Predmet
+            <input class="input" name="subject" placeholder="Krátky predmet (voliteľné)" />
+          </label>
+
+          <label class="lbl">
+            Správa
+            <textarea class="input" name="message" rows="5" placeholder="Napíš správu..." required></textarea>
+          </label>
+
+          <button class="btn" id="sendBtn" type="submit">Odoslať</button>
+          <p class="muted tiny form-status" id="formStatus" aria-live="polite"></p>
+
+          <p class="muted tiny">
+           
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span class="muted tiny">© <span id="year"></span> Martin • CV web</span>
+    </footer>
+  </div>
+</section>
   </main>
 
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+
   <script src="app.js"></script>
+
 </body>
 </html>
