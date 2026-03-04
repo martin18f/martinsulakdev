@@ -1,35 +1,35 @@
 # martinsulakdev
 
-Osobná webová stránka, ktorá predstavuje moje projekty, skúsenosti a kontakt.  
-Cieľom je mať jednoduché, rýchle a prehľadné portfólio, ktoré môžem ďalej rozširovať.
+A personal website showcasing my projects, experience, and contact information.  
+The goal of this site is to provide a simple, fast, and modern portfolio that I can continue to expand over time.
 
-## 🔗 Live verzia
-Stránku si môžeš pozrieť tu:  
+## 🔗 Live Demo
+Visit the live version here:  
 **https://martin18f.github.io/martinsulakdev**
 
-## 🛠 Použité technológie
-- **HTML** – štruktúra stránky  
-- **CSS** – štýly a responzivita  
-- **JavaScript** – interaktivita a dynamické prvky  
+## 🛠 Technologies Used
+- **HTML** — page structure  
+- **CSS** — styling and responsive layout  
+- **JavaScript** — interactive elements and dynamic behavior  
 
-## 📁 Štruktúra projektu
-- `index.html` – hlavná stránka  
-- `style.css` – štýlovanie  
-- `app.js` – skripty  
-- `README.md` – dokumentácia projektu  
+## 📁 Project Structure
+- `index.html` — main page  
+- `style.css` — styling  
+- `app.js` — scripts  
+- `README.md` — project documentation  
 
-## 🎯 Funkcie
-- Prehľad mojich projektov  
-- Sekcia o mne  
-- Kontaktné informácie  
-- Jednoduchý, čistý a moderný dizajn  
+## 🎯 Features
+- Overview of my projects  
+- About me section  
+- Contact information  
+- Clean, modern, and responsive design  
 
-## 🚀 Plány do budúcna
-- Pridať viac projektov  
-- Vylepšiť dizajn a animácie  
-- Pridať dark/light mód  
-- Prepojiť stránku s Google Analytics  
+## 🚀 Future Improvements
+- Add more projects  
+- Improve animations and UI details  
+- Add dark/light mode  
+- Integrate Google Analytics  
 
-## 👤 Autor
+## 👤 Author
 **Martin Šulák**  
 Frontend & web developer  
