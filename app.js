@@ -1,3 +1,5 @@
+import { inject } from "@vercel/analytics"
+
 (() => {
   const root = document.documentElement;
 
