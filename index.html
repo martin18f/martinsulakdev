@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Martin – CV</title>
+  <meta name="description" content="CV – Martin (Študent AI, FEI TUKE) | Web, aplikácie, IoT" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip" href="#obsah">Preskočiť na obsah</a>
+
+  <header class="topbar" role="banner">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">M</div>
+        <div class="brand-text">
+          <div class="name">Martin</div>
+          <div class="role">Študent AI • Web & Aplikácie • IoT</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Hlavná navigácia">
+        <a href="#profil">Profil</a>
+        <a href="#skills">Zručnosti</a>
+        <a href="#projekty">Projekty</a>
+        <a href="#vzdelanie">Vzdelanie</a>
+        <a href="#praxa">Praxa</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn ghost" id="themeBtn" type="button" aria-label="Prepnúť tému">Téma</button>
+        <button class="btn" id="printBtn" type="button">Tlačiť / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="obsah">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-left">
+          <p class="pill">
+            <span class="dot"></span>
+            Dostupný pre brigádu / part-time • Remote/Hybrid
+          </p>
+
+          <h1>
+            Martin
+            <small>Študent umelej inteligencie (FEI TUKE)</small>
+          </h1>
+
+          <p class="lead">
+            Zameriavam sa na vývoj moderných webov a aplikácií, AI/ML školské projekty (CN2, ID3, perceptrón)
+            a praktické integrácie s IoT. Preferujem čistý dizajn, dobrú UX a merateľné výsledky.
+          </p>
+
+          <div class="quick">
+            <a class="chip" href="#kontakt">Kontakt</a>
+            <a class="chip" href="#projekty">Portfólio</a>
+            <a class="chip" href="#skills">Zručnosti</a>
+          </div>
+
+          <div class="links">
+            <a class="link" href="https://github.com/martin18f" target="_blank" rel="noreferrer">GitHub</a>
+            <span class="sep">•</span>
+            <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn (doplň)</a>
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-label="Rýchle info">
+          <div class="card kpis">
+            <div class="kpi">
+              <div class="kpi-num">3+</div>
+              <div class="kpi-label">väčšie webové projekty</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">AI/ML</div>
+              <div class="kpi-label">CN2, ID3, perceptrón</div>
+            </div>
+            <div class="kpi">
+              <div class="kpi-num">IoT</div>
+              <div class="kpi-label">zariadenia, senzory, integrácie</div>
+            </div>
+          </div>
+
+          <div class="card mini">
+            <h3>Preferencie</h3>
+            <ul class="bullets">
+              <li>Moderný frontend (HTML/CSS/JS), dôraz na UX</li>
+              <li>Dáta, automatizácia, jednoduché API integrácie</li>
+              <li>Čistý kód, debug, Git workflow</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <div class="bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- PROFIL -->
+    <section class="section" id="profil">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Profil</h2>
+          <p>
+            Študujem umelú inteligenciu na FEI TUKE. Vyvíjam webové stránky a aplikácie, robím školské AI/ML projekty
+            (pravidlá, rozhodovacie stromy) a pracujem aj s IoT zariadeniami. Hľadám príležitosti, kde viem spojiť
+            technické zručnosti s praktickým dopadom.
+          </p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Silné stránky</h3>
+            <ul class="bullets">
+              <li>Rýchla orientácia v probléme, samostatnosť</li>
+              <li>Cit pre detail (UI/UX), moderný vizuál</li>
+              <li>Dôslednosť pri debugovaní a verzovaní</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Zameranie</h3>
+            <div class="tags">
+              <span class="tag">Frontend</span>
+              <span class="tag">Web Apps</span>
+              <span class="tag">AI/ML základy</span>
+              <span class="tag">IoT</span>
+              <span class="tag">Git/GitHub</span>
+              <span class="tag">Deploy (Vercel)</span>
+            </div>
+            <p class="muted">(Doplníme konkrétne pozície/stack podľa cieľa CV.)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head row">
+          <div>
+            <h2>Zručnosti</h2>
+            <p class="muted">Vyhľadávanie zvýrazní tagy.</p>
+          </div>
+          <div class="skill-controls">
+            <input id="skillSearch" class="input" type="search" placeholder="Hľadať (napr. JavaScript, Git, ML)..." />
+          </div>
+        </div>
+
+        <div class="grid three" id="skillGrid">
+          <div class="card skill">
+            <h3>Web</h3>
+            <div class="tags">
+              <span class="tag" data-skill="HTML">HTML</span>
+              <span class="tag" data-skill="CSS">CSS</span>
+              <span class="tag" data-skill="JavaScript">JavaScript</span>
+              <span class="tag" data-skill="UI/UX">UI/UX</span>
+              <span class="tag" data-skill="Responsive">Responsive</span>
+            </div>
+            <p class="muted">Komponenty, layouty, animácie, prístupnosť.</p>
+          </div>
+
+          <div class="card skill">
+            <h3>AI/ML</h3>
+            <div class="tags">
+              <span class="tag" data-skill="CN2">CN2</span>
+              <span class="tag" data-skill="ID3">ID3</span>
+              <span class="tag" data-skill="Perceptron">Perceptrón</span>
+              <span class="tag" data-skill="Python">Python</span>
+              <span class="tag" data-skill="Pandas">Pandas</span>
+            </div>
+            <p class="muted">Príprava dát, vyhodnotenie metrík, experimenty.</p>
+          </div>
+
+          <div class="card skill">
+            <h3>Nástroje</h3>
+            <div class="tags">
+              <span class="tag" data-skill="Git">Git</span>
+              <span class="tag" data-skill="GitHub">GitHub</span>
+              <span class="tag" data-skill="Vercel">Vercel</span>
+              <span class="tag" data-skill="REST">REST API</span>
+              <span class="tag" data-skill="IoT">IoT</span>
+            </div>
+            <p class="muted">Deploy, repozitáre, jednoduché integrácie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJEKTY -->
+    <section class="section" id="projekty">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Projekty</h2>
+          <p class="muted">Doplň odkazy na demo/repo podľa toho, čo chceš ukázať verejne.</p>
+        </div>
+
+        <div class="grid three">
+          <article class="card project">
+            <div class="project-top">
+              <h3>PP AUTO – web + admin panel</h3>
+              <span class="badge">Web</span>
+            </div>
+            <p>Interaktívny web autosalónu s filtrami, sliderom a admin rozhraním pre správu dát.</p>
+            <ul class="mini-list">
+              <li>Deploy: Vercel, verzovanie: GitHub</li>
+              <li>Dynamické načítanie dát, UI komponenty</li>
+              <li>Mobilná verzia, UX iterácie</li>
+            </ul>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Demo (doplň)</a>
+              <a class="link" href="#" target="_blank" rel="noreferrer">Repo (doplň)</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-top">
+              <h3>Fuely – palivová kalkulačka</h3>
+              <span class="badge">App</span>
+            </div>
+            <p>Web aplikácia na výpočty spotreby/nákladov, pripravená na rozšírenie.</p>
+            <ul class="mini-list">
+              <li>Formuláre, validácia, čisté UI</li>
+              <li>Nasadenie a README</li>
+            </ul>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Demo (doplň)</a>
+              <a class="link" href="https://github.com/martin18f" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-top">
+              <h3>AI/ML – CN2, ID3, perceptrón</h3>
+              <span class="badge">AI/ML</span>
+            </div>
+            <p>Školské implementácie a experimenty s klasifikačnými modelmi.</p>
+            <ul class="mini-list">
+              <li>Python, Pandas (príp. scikit-learn)</li>
+              <li>Dataset, metriky, analýza</li>
+            </ul>
+            <div class="project-links">
+              <a class="link" href="#" target="_blank" rel="noreferrer">Repo (doplň)</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VZDELANIE -->
+    <section class="section" id="vzdelanie">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Vzdelanie</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="t-item card">
+            <div class="t-when">202X – súčasnosť</div>
+            <div class="t-what">
+              <h3>TUKE – FEI</h3>
+              <p class="muted">Odbor: Umelá inteligencia</p>
+              <ul class="bullets">
+                <li>Zameranie: strojové učenie, algoritmy, programovanie</li>
+                <li>Projekty: CN2/ID3, implementácie modelov</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="t-item card">
+            <div class="t-when">Doplň</div>
+            <div class="t-what">
+              <h3>Kurzy / certifikáty</h3>
+              <p class="muted">Sem doplníme iba to, čo chceš verejne zdieľať.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRAX -->
+    <section class="section" id="praxa">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Praxa</h2>
+          <p class="muted">Keď doplníš konkrétne pozície, prepíšem odrážky na výsledky (achievement-based).</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Študentské a projektové skúsenosti</h3>
+            <ul class="bullets">
+              <li>Vývoj webov a aplikácií (responzívnosť, UI komponenty)</li>
+              <li>Deploy a verzovanie (Git/GitHub, Vercel)</li>
+              <li>Debug a optimalizácie UX</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>IoT a automatizácia</h3>
+            <ul class="bullets">
+              <li>Práca s IoT zariadeniami/senzormi a integrácie</li>
+              <li>Prototypy a testovanie</li>
+              <li>Záujem o smart monitoring riešenia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section class="section" id="kontakt">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Kontakt</h2>
+          <p class="muted">Verejne odporúčam ponechať len LinkedIn + GitHub. Email/telefón doplníme, až keď chceš.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Odkazy</h3>
+            <div class="contact">
+              <div class="c-row">
+                <span class="c-key">LinkedIn</span>
+                <a class="c-val" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">doplň profil</a>
+              </div>
+              <div class="c-row">
+                <span class="c-key">GitHub</span>
+                <a class="c-val" href="https://github.com/martin18f" target="_blank" rel="noreferrer">martin18f</a>
+              </div>
+              <div class="c-row">
+                <span class="c-key">Email (voliteľné)</span>
+                <span class="c-val">martin [at] domena [dot] sk</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Krátka poznámka</h3>
+            <p class="muted">
+              Pre rýchly kontakt preferujem LinkedIn správu. Na vyžiadanie pošlem PDF verziu CV alebo detailnejšie portfólio.
+            </p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <span class="muted tiny">© <span id="year"></span> Martin • CV web</span>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
