@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const formStatus = document.getElementById("formStatus");
   const sendBtn = document.getElementById("sendBtn");
 
+  
+
   const translations = {
     sk: {
       metaTitle: "Martin Šulák • AI študent • Portfólio",
@@ -59,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
       portfolioLink: "Portfólio",
       linkedinSoon: "LinkedIn bude doplnený",
 
-      kpiWeb: "vývoj webov a aplikácií",
-      kpiAi: "školské a praktické projekty",
+      kpiWeb: "weby a aplikácie",
+      kpiAi: "školské projekty",
       kpiSystems: "riadenie a simulácie",
 
       focusTitle: "Zameranie",
@@ -239,9 +241,9 @@ document.addEventListener("DOMContentLoaded", () => {
       portfolioLink: "Portfolio",
       linkedinSoon: "LinkedIn will be added",
 
-      kpiWeb: "web and application development",
-      kpiAi: "academic and practical projects",
-      kpiSystems: "control and simulations",
+      kpiWeb: "web apps",
+      kpiAi: "academic projects",
+      kpiSystems: "control & simulations",
 
       focusTitle: "Focus",
       focus1: "Modern frontend and responsive user interfaces",
