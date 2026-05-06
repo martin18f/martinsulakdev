@@ -1,5 +1,7 @@
 <div align="center">
 
+
+
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:2563eb,100:9333ea&height=220&section=header&text=Martin%20Šulák&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Artificial%20Intelligence%20Student%20%7C%20Software%20Developer%20%7C%20Engineering%20Enthusiast&descAlignY=58&descSize=18" />
 
 <p>
@@ -22,7 +24,8 @@
 
 ## About Me
 
-I am an Artificial Intelligence student at the Faculty of Electrical Engineering and Informatics, Technical University of Košice.
+
+I am an Artificial Intelligence student at the Faculty of Electrical Engineering and Informatics, Technical University of Košice, Slovakia.
 
 I focus on practical technical projects across software development, artificial intelligence, and engineering-oriented technologies. My work combines academic knowledge with hands-on implementation through personal projects, school assignments, experiments, and technical solutions.
 
@@ -141,15 +144,14 @@ Additional information about projects can be found inside the corresponding fold
 
 ## Highlighted Projects
 
-Selected projects and repositories are listed below. Some projects are included directly in this repository, while others are available through external repositories or live links.
-
-| Project | Description | Technologies | Links |
+| Category | Project | Description | Links |
 |---|---|---|---|
-| PP AUTO | Automotive dealership web project | HTML, CSS, JavaScript | [Repository](https://github.com/martin18f/ppauto) • [Live Demo](https://ppauto.sk) |
-| Fuely | Fuel cost calculator web application | React, JavaScript | [Repository](https://github.com/martin18f/fuely) • [Live Demo](https://fuely-nine.vercel.app/) |
-| Speech Stress Detection | Neural network project focused on speech-based stress detection | Python, Neural Networks | [Repository](https://github.com/adrianzbur/ns-projekt-dsrs) |
-| UAV Control System | Control systems project focused on UAV simulation and fuzzy control | MATLAB, Simulink | Available in this repository |
-| Machine Learning Project | Machine learning academic project and experiments | Python, Machine Learning | Available in this repository |
+| Job Project | PP AUTO | Automotive dealership website project | [Live Website](https://ppauto.sk) |
+| Job Project | Autoškola Roka | Driving school website project | [Live Website](https://www.autoskolaroka.sk/) |
+| Personal Project | Fuely | Fuel cost calculator web application | [Repository](https://github.com/martin18f/fuely) • [Live Demo](https://fuely-nine.vercel.app/) |
+| Academic Project | Speech Stress Detection | Neural network project for speech-based stress detection | [Repository](https://github.com/adrianzbur/ns-projekt-dsrs) |
+| Academic Project | UAV Control System | UAV simulation and fuzzy control project | Available in this repository |
+| Academic Project | Machine Learning Project | Machine learning academic project and experiments | Available in this repository |
 
 > More projects and links will be added as this portfolio grows.
 
@@ -196,14 +198,6 @@ Certifications and completed courses are available inside the repository.
 
 <div align="center">
 
-## GitHub Statistics
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=martin18f&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=martin18f&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" />
-
-</div>
-
----
 
 <div align="center">
 

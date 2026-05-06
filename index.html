@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="sk" data-theme="dark">
 <head>
-
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z09CQZZVHQ"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Martin – CV</title>
-  <meta name="description" content="CV – Martin (Študent AI, FEI TUKE) | Web, aplikácie, IoT" />
+  <title>Martin Šulák • AI Student • Portfolio</title>
+  <meta name="description" content="Personal portfolio of Martin Šulák — Artificial Intelligence student focused on software development, AI/ML projects, control systems, IoT, and modern web technologies." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,394 +14,458 @@
 </head>
 
 <body>
-  <a class="skip" href="#obsah">Preskočiť na obsah</a>
+  <a class="skip" href="#obsah" data-i18n="skip">Preskočiť na obsah</a>
 
   <header class="topbar" role="banner" id="topbar">
     <div class="wrap topbar-inner">
-      <div class="brand">
+      <a class="brand" href="#obsah" aria-label="Martin Šulák portfolio">
         <div class="avatar" aria-hidden="true">M</div>
         <div class="brand-text">
-          <div class="name">Martin</div>
-          <div class="role">Študent AI • Web & Aplikácie • IoT</div>
+          <div class="name">Martin Šulák</div>
+          <div class="role" data-i18n="brandRole">AI študent • Developer • Engineering</div>
         </div>
-      </div>
+      </a>
 
-      <nav class="nav" id="mainNav" aria-label="Hlavná navigácia">
-        <a href="#profil">Profil</a>
-        <a href="#skills">Zručnosti</a>
-        <a href="#projekty">Projekty</a>
-        <a href="#vzdelanie">Vzdelanie</a>
-        <a href="#prax">Prax</a>
-        <a href="#kontakt">Kontakt</a>
+      <nav class="nav" id="mainNav" aria-label="Hlavná navigácia" data-i18n-attr="aria-label:navAria">
+        <a href="#profil" data-i18n="navProfile">Profil</a>
+        <a href="#skills" data-i18n="navSkills">Zručnosti</a>
+        <a href="#projekty" data-i18n="navProjects">Projekty</a>
+        <a href="#vzdelanie" data-i18n="navEducation">Vzdelanie</a>
+        <a href="#certifikaty" data-i18n="navCerts">Certifikáty</a>
+        <a href="#kontakt" data-i18n="navContact">Kontakt</a>
       </nav>
 
       <div class="actions">
         <button class="nav-toggle" id="navToggle" type="button"
-          aria-label="Otvoriť navigáciu" aria-expanded="false" aria-controls="mainNav">
+          aria-label="Otvoriť navigáciu" aria-expanded="false" aria-controls="mainNav"
+          data-i18n-attr="aria-label:openNav">
           <span></span><span></span><span></span>
         </button>
-        <button class="btn ghost" id="themeBtn" type="button" aria-label="Prepnúť tému">Téma</button>
-        <button class="btn" id="printBtn" type="button">Tlačiť / PDF</button>
+
+        <button class="btn ghost" id="langBtn" type="button" aria-label="Switch language" data-i18n-attr="aria-label:langBtnAria">EN</button>
+        <button class="btn ghost" id="themeBtn" type="button" aria-label="Prepnúť tému" data-i18n="themeBtn" data-i18n-attr="aria-label:themeAria">Téma</button>
+        <button class="btn" id="printBtn" type="button" data-i18n="printBtn">Tlačiť / PDF</button>
       </div>
     </div>
   </header>
 
   <main id="obsah">
-
-    
     <section class="hero">
       <div class="wrap hero-inner">
-
         <div class="hero-left">
           <p class="pill">
             <span class="dot"></span>
-            Dostupný pre brigádu / part-time • Remote/Hybrid
+            <span data-i18n="heroPill">Artificial Intelligence • Software Development • Engineering</span>
           </p>
 
           <h1>
-            <span class="grad">Martin</span>
-            <small>Študent umelej inteligencie (FEI TUKE)</small>
+            <span class="grad">Martin Šulák</span>
+            <small data-i18n="heroSubtitle">Študent umelej inteligencie • FEI TUKE</small>
           </h1>
 
-          <p class="lead">
-            Zameriavam sa na vývoj moderných webov a aplikácií, AI/ML školské projekty
-            (CN2, ID3, perceptrón) a praktické integrácie s IoT. Preferujem čistý dizajn,
-            dobrú UX a merateľné výsledky.
+          <p class="lead" data-i18n="heroLead">
+            Zameriavam sa na praktické technické projekty z oblastí softvérového vývoja,
+            umelej inteligencie, strojového učenia, riadiacich systémov a moderných webových technológií.
+            Prepájam akademické znalosti s praktickou implementáciou v osobných aj školských projektoch.
           </p>
 
           <div class="quick">
-            <a class="chip" href="#kontakt">Kontakt</a>
-            <a class="chip" href="#projekty">Portfólio</a>
-            <a class="chip" href="#skills">Zručnosti</a>
+            <a class="chip" href="#kontakt" data-i18n="quickContact">Kontakt</a>
+            <a class="chip" href="#projekty" data-i18n="quickProjects">Projekty</a>
+            <a class="chip" href="#skills" data-i18n="quickSkills">Zručnosti</a>
           </div>
 
           <div class="links">
             <a class="link" href="https://github.com/martin18f" target="_blank" rel="noreferrer">GitHub</a>
             <span class="sep">•</span>
-            <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn (doplň)</a>
+            <a class="link" href="https://martin18f.github.io/martinsulakdev/" target="_blank" rel="noreferrer" data-i18n="portfolioLink">Portfólio</a>
+            <span class="sep">•</span>
+            <span class="link muted" data-i18n="linkedinSoon">LinkedIn bude doplnený</span>
           </div>
         </div>
 
-        <aside class="hero-right" aria-label="Rýchle info">
+        <aside class="hero-right" aria-label="Rýchle info" data-i18n-attr="aria-label:quickInfo">
           <div class="card kpis">
             <div class="kpi">
-              <div class="kpi-num">3+</div>
-              <div class="kpi-label">väčšie webové projekty</div>
+              <div class="kpi-num">Web</div>
+              <div class="kpi-label" data-i18n="kpiWeb">vývoj webov a aplikácií</div>
             </div>
             <div class="kpi">
               <div class="kpi-num">AI/ML</div>
-              <div class="kpi-label">CN2, ID3, perceptrón</div>
+              <div class="kpi-label" data-i18n="kpiAi">školské a praktické projekty</div>
             </div>
             <div class="kpi">
-              <div class="kpi-num">IoT</div>
-              <div class="kpi-label">zariadenia, senzory, integrácie</div>
+              <div class="kpi-num">Systems</div>
+              <div class="kpi-label" data-i18n="kpiSystems">riadenie a simulácie</div>
             </div>
           </div>
 
           <div class="card mini">
-            <h3>Preferencie</h3>
+            <h3 data-i18n="focusTitle">Zameranie</h3>
             <ul class="bullets">
-              <li>Moderný frontend (HTML/CSS/JS), dôraz na UX</li>
-              <li>Dáta, automatizácia, jednoduché API integrácie</li>
-              <li>Čistý kód, debug, Git workflow</li>
+              <li data-i18n="focus1">Moderný frontend a responzívne používateľské rozhrania</li>
+              <li data-i18n="focus2">AI/ML experimenty, dáta a technická dokumentácia</li>
+              <li data-i18n="focus3">Riadiace systémy, simulácie a engineering projekty</li>
             </ul>
           </div>
         </aside>
       </div>
-
       <div class="bg" aria-hidden="true"></div>
     </section>
 
-    
+    <section class="tech-stack reveal" aria-label="Technology stack" data-i18n-attr="aria-label:techStackAria">
+      <div class="wrap">
+        <div class="stack-icons">
+          <img src="https://skillicons.dev/icons?i=html,css,javascript,react,python,java,c,mysql,matlab,vscode,git,github" alt="HTML, CSS, JavaScript, React, Python, Java, C, SQL, MATLAB, VS Code, Git, GitHub" />
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="profil">
       <div class="wrap">
-
         <div class="section-head reveal">
-          <h2>Profil</h2>
-          <p>
-            Študujem umelú inteligenciu na FEI TUKE. Vyvíjam webové stránky a aplikácie,
-            robím školské AI/ML projekty (pravidlá, rozhodovacie stromy) a pracujem aj s IoT
-            zariadeniami. Hľadám príležitosti, kde viem spojiť technické zručnosti s praktickým dopadom.
+          <h2 data-i18n="profileTitle">Profil</h2>
+          <p data-i18n="profileText">
+            Študujem umelú inteligenciu na Fakulte elektrotechniky a informatiky Technickej univerzity v Košiciach.
+            Venujem sa web developmentu, AI/ML projektom, riadiacim systémom a IoT. Mojím cieľom je budovať technické projekty,
+            ktoré majú praktický význam a zároveň rozvíjajú moje softvérové aj inžinierske schopnosti.
           </p>
         </div>
 
         <div class="grid two">
           <div class="card reveal rv1">
-            <h3>Silné stránky</h3>
+            <h3 data-i18n="strengthsTitle">Silné stránky</h3>
             <ul class="bullets">
-              <li>Rýchla orientácia v probléme, samostatnosť</li>
-              <li>Cit pre detail (UI/UX), moderný vizuál</li>
-              <li>Dôslednosť pri debugovaní a verzovaní</li>
+              <li data-i18n="strength1">Rýchla orientácia v technickom probléme a samostatnosť</li>
+              <li data-i18n="strength2">Cit pre detail, moderný vizuál a UX</li>
+              <li data-i18n="strength3">Dôslednosť pri debugovaní, verzovaní a dokumentácii</li>
             </ul>
           </div>
 
           <div class="card reveal rv2">
-            <h3>Zameranie</h3>
+            <h3 data-i18n="areasTitle">Oblasti záujmu</h3>
             <div class="tags">
-              <span class="tag">Frontend</span>
-              <span class="tag">Web Apps</span>
-              <span class="tag">AI/ML základy</span>
+              <span class="tag">Web Development</span>
+              <span class="tag">Artificial Intelligence</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Control Systems</span>
               <span class="tag">IoT</span>
-              <span class="tag">Git/GitHub</span>
-              <span class="tag">Deploy (Vercel)</span>
             </div>
-            <p class="muted">(Doplníme konkrétne pozície/stack podľa cieľa CV.)</p>
+            <p class="muted" data-i18n="areasNote">Profil je priebežne rozširovaný podľa nových projektov, školských zadaní a technológií.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    
     <section class="section" id="skills">
       <div class="wrap">
-
         <div class="section-head row reveal">
           <div>
-            <h2>Zručnosti</h2>
-            <p class="muted">Vyhľadávanie zvýrazní tagy.</p>
+            <h2 data-i18n="skillsTitle">Zručnosti</h2>
+            <p class="muted" data-i18n="skillsHint">Vyhľadávanie zvýrazní relevantné technológie a tagy.</p>
           </div>
           <div class="skill-controls">
-            <input id="skillSearch" class="input" type="search"
-              placeholder="Hľadať (napr. JavaScript, Git, ML)..." />
+            <input id="skillSearch" class="input" type="search" placeholder="Hľadať napr. JavaScript, Git, ML..." data-i18n-attr="placeholder:skillPlaceholder" />
           </div>
         </div>
 
         <div class="grid three" id="skillGrid">
           <div class="card skill reveal rv1">
-            <h3>Web</h3>
+            <h3>Frontend</h3>
             <div class="tags">
               <span class="tag" data-skill="HTML">HTML</span>
               <span class="tag" data-skill="CSS">CSS</span>
               <span class="tag" data-skill="JavaScript">JavaScript</span>
-              <span class="tag" data-skill="UI/UX">UI/UX</span>
+              <span class="tag" data-skill="React">React</span>
               <span class="tag" data-skill="Responsive">Responsive</span>
             </div>
-            <p class="muted">Komponenty, layouty, animácie, prístupnosť.</p>
+            <p class="muted" data-i18n="frontendText">Moderné rozhrania, responzívne layouty, animácie a používateľská skúsenosť.</p>
           </div>
 
           <div class="card skill reveal rv2">
-            <h3>AI/ML</h3>
+            <h3>AI / ML</h3>
             <div class="tags">
-              <span class="tag" data-skill="CN2">CN2</span>
-              <span class="tag" data-skill="ID3">ID3</span>
-              <span class="tag" data-skill="Perceptron">Perceptrón</span>
               <span class="tag" data-skill="Python">Python</span>
-              <span class="tag" data-skill="Pandas">Pandas</span>
+              <span class="tag" data-skill="Neural Networks">Neural Networks</span>
+              <span class="tag" data-skill="Machine Learning">Machine Learning</span>
+              <span class="tag" data-skill="CN2">CN2</span>
+              <span class="tag" data-skill="Data Analysis">Data Analysis</span>
             </div>
-            <p class="muted">Príprava dát, vyhodnotenie metrík, experimenty.</p>
+            <p class="muted" data-i18n="aimlText">Príprava dát, modelovanie, vyhodnotenie metrík a školské experimenty.</p>
           </div>
 
           <div class="card skill reveal rv3">
-            <h3>Nástroje</h3>
+            <h3 data-i18n="engineeringTitle">Engineering</h3>
             <div class="tags">
-              <span class="tag" data-skill="Git">Git</span>
-              <span class="tag" data-skill="GitHub">GitHub</span>
-              <span class="tag" data-skill="Vercel">Vercel</span>
-              <span class="tag" data-skill="REST">REST API</span>
+              <span class="tag" data-skill="MATLAB">MATLAB</span>
+              <span class="tag" data-skill="Simulink">Simulink</span>
+              <span class="tag" data-skill="Control Systems">Control Systems</span>
               <span class="tag" data-skill="IoT">IoT</span>
+              <span class="tag" data-skill="Git">Git</span>
             </div>
-            <p class="muted">Deploy, repozitáre, jednoduché integrácie.</p>
+            <p class="muted" data-i18n="engineeringText">Riadiace systémy, simulácie, IoT riešenia, verzovanie a technická dokumentácia.</p>
           </div>
         </div>
-
       </div>
     </section>
 
-    
     <section class="section" id="projekty">
       <div class="wrap">
-
         <div class="section-head reveal">
-          <h2>Projekty</h2>
-          <p class="muted">Doplň odkazy na demo/repo podľa toho, čo chceš ukázať verejne.</p>
+          <h2 data-i18n="projectsTitle">Projekty</h2>
+          <p class="muted" data-i18n="projectsIntro">
+            Vybrané projekty a repozitáre. Niektoré sú priamo v tomto portfóliu, iné majú vlastný repozitár alebo verejný live link.
+          </p>
         </div>
 
         <div class="grid three">
           <article class="card project reveal rv1">
             <div class="project-top">
-              <h3>PP AUTO – web + admin panel</h3>
+              <h3>PP AUTO</h3>
               <span class="badge web">Web</span>
             </div>
-            <p>Interaktívny web autosalónu s filtrami, sliderom a admin rozhraním pre správu dát.</p>
+            <p data-i18n="ppautoDesc">Webový projekt pre autosalón s moderným dizajnom, prezentáciou značiek, skladovými vozidlami a kontaktnými funkciami.</p>
             <ul class="mini-list">
-              <li>Deploy: Vercel, verzovanie: GitHub</li>
-              <li>Dynamické načítanie dát, UI komponenty</li>
-              <li>Mobilná verzia, UX iterácie</li>
+              <li data-i18n="ppauto1">Moderný web design a responzívne rozhranie</li>
+              <li data-i18n="ppauto2">Prezentácia vozidiel, značiek a služieb</li>
+              <li data-i18n="ppauto3">Live projekt mimo tohto repozitára</li>
             </ul>
             <div class="project-links">
-              <a class="link" href="https://www.ppauto.sk" target="_blank" rel="noreferrer">www.ppauto.sk</a>
-              <a class="link" href="https://github.com/martin18f/ppauto" target="_blank" rel="noreferrer">github.com/martin18f/ppauto</a>
+              <a class="link" href="https://ppauto.sk" target="_blank" rel="noreferrer">ppauto.sk</a>
             </div>
           </article>
 
           <article class="card project reveal rv2">
             <div class="project-top">
-              <h3>Fuely – palivová kalkulačka</h3>
+              <h3>Autoškola Roka</h3>
+              <span class="badge web">Web</span>
+            </div>
+
+            <p data-i18n="autoskolaDesc">
+              Webový projekt pre autoškolu v Spišskej Novej Vsi s verejnou prezentáciou služieb, kurzov a kontaktných informácií.
+            </p>
+
+            <ul class="mini-list">
+              <li data-i18n="autoskola1">Prezentačný web pre lokálnu službu</li>
+              <li data-i18n="autoskola2">Frontend, verejný obsah a základná dynamická funkcionalita</li>
+              <li data-i18n="autoskola3">Samostatný repozitár a live web</li>
+            </ul>
+
+            <div class="project-links">
+              <a class="link" href="https://github.com/martin18f/autoskola-roka" target="_blank" rel="noreferrer">GitHub Repository</a>
+              <a class="link" href="https://www.autoskolaroka.sk/" target="_blank" rel="noreferrer">Live Website</a>
+            </div>
+          </article>
+
+          <article class="card project reveal rv2">
+            <div class="project-top">
+              <h3>Fuely</h3>
               <span class="badge app">App</span>
             </div>
-            <p>Web aplikácia na výpočty spotreby/nákladov, pripravená na rozšírenie.</p>
+            <p data-i18n="fuelyDesc">Webová aplikácia na výpočet nákladov na palivo a praktické porovnávanie nákladov pri jazde autom.</p>
             <ul class="mini-list">
-              <li>Formuláre, validácia, čisté UI</li>
-              <li>Nasadenie a README</li>
+              <li data-i18n="fuely1">React aplikácia s čistým používateľským rozhraním</li>
+              <li data-i18n="fuely2">Výpočty, formuláre a validácia vstupov</li>
+              <li data-i18n="fuely3">Samostatný repozitár a live demo</li>
             </ul>
             <div class="project-links">
-              <a class="link" href="https://fuely-nine.vercel.app/" target="_blank" rel="noreferrer">fuely-nine.vercel.app</a>
-              <a class="link" href="https://github.com/martin18f/fuely" target="_blank" rel="noreferrer">github.com/martin18f/fuely</a>
+              <a class="link" href="https://github.com/martin18f/fuely" target="_blank" rel="noreferrer">GitHub Repository</a>
+              <a class="link" href="https://fuely-nine.vercel.app/" target="_blank" rel="noreferrer">Live Demo</a>
             </div>
           </article>
 
           <article class="card project reveal rv3">
             <div class="project-top">
-              <h3>AI/ML – CN2, ID3, perceptrón</h3>
-              <span class="badge aiml">AI/ML</span>
+              <h3 data-i18n="stressTitle">Speech Stress Detection</h3>
+              <span class="badge aiml">NN</span>
             </div>
-            <p>Školské implementácie a experimenty s klasifikačnými modelmi.</p>
+            <p data-i18n="stressDesc">Neural network project focused on stress detection from speech data using machine learning and audio-based features.</p>
             <ul class="mini-list">
-              <li>Python, Pandas (príp. scikit-learn)</li>
-              <li>Dataset, metriky, analýza</li>
+              <li data-i18n="stress1">Spracovanie datasetov a príprava vstupov</li>
+              <li data-i18n="stress2">Neural network experimenty a metriky</li>
+              <li data-i18n="stress3">Skupinový akademický projekt</li>
             </ul>
             <div class="project-links">
-              <a class="link" href="#" target="_blank" rel="noreferrer">Repo (doplň)</a>
+              <a class="link" href="https://github.com/adrianzbur/ns-projekt-dsrs" target="_blank" rel="noreferrer">GitHub Repository</a>
+            </div>
+          </article>
+
+          <article class="card project reveal rv1">
+            <div class="project-top">
+              <h3 data-i18n="uavTitle">UAV Control System</h3>
+              <span class="badge system">Control</span>
+            </div>
+            <p data-i18n="uavDesc">Control systems project focused on UAV simulation, fuzzy logic control, and MATLAB/Simulink based engineering experiments.</p>
+            <ul class="mini-list">
+              <li data-i18n="uav1">MATLAB/Simulink simulation workflow</li>
+              <li data-i18n="uav2">Fuzzy logic controller and optimization</li>
+              <li data-i18n="uav3">Available in this portfolio repository</li>
+            </ul>
+            <div class="project-links">
+              <span class="link muted" data-i18n="availablePortfolio">Available in portfolio repository</span>
+            </div>
+          </article>
+
+          <article class="card project reveal rv2">
+            <div class="project-top">
+              <h3 data-i18n="mlTitle">Machine Learning Project</h3>
+              <span class="badge aiml">ML</span>
+            </div>
+            <p data-i18n="mlDesc">Machine learning academic project and experiments focused on model implementation, evaluation, and practical understanding of ML workflows.</p>
+            <ul class="mini-list">
+              <li data-i18n="ml1">Python-based machine learning implementation</li>
+              <li data-i18n="ml2">Dataset processing and model evaluation</li>
+              <li data-i18n="ml3">Available in this portfolio repository</li>
+            </ul>
+            <div class="project-links">
+              <span class="link muted" data-i18n="availablePortfolio2">Available in portfolio repository</span>
+            </div>
+          </article>
+
+          <article class="card project reveal rv3">
+            <div class="project-top">
+              <h3 data-i18n="academicTitle">Academic Assignments</h3>
+              <span class="badge academic">Study</span>
+            </div>
+            <p data-i18n="academicDesc">School projects, technical reports, experiments, and documentation created during my Artificial Intelligence studies.</p>
+            <ul class="mini-list">
+              <li data-i18n="academic1">AI, ML and programming assignments</li>
+              <li data-i18n="academic2">Reports, documentation and experiments</li>
+              <li data-i18n="academic3">Continuously expanded during studies</li>
+            </ul>
+            <div class="project-links">
+              <span class="link muted" data-i18n="availableRepo">Available in repository folders</span>
             </div>
           </article>
         </div>
-
       </div>
     </section>
 
-    
     <section class="section" id="vzdelanie">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 data-i18n="educationTitle">Vzdelanie</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="t-item card reveal rv1 current">
+        <div class="t-when" data-i18n="universityWhen">2024 – súčasnosť<br>2. ročník</div>
+        <div class="t-what">
+          <h3 data-i18n="universitySchool">Technická univerzita v Košiciach • Fakulta elektrotechniky a informatiky</h3>
+          <p class="muted" data-i18n="universityField">Odbor: Umelá inteligencia</p>
+          <ul class="bullets">
+            <li data-i18n="university1">Štúdium zamerané na umelú inteligenciu, algoritmy, programovanie a technické projekty</li>
+            <li data-i18n="university2">Praktické školské projekty z oblastí AI/ML, neurónových sietí, dát a softvérových implementácií</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-item card reveal rv2">
+        <div class="t-when" data-i18n="secondaryWhen">2018 – 2022</div>
+        <div class="t-what">
+          <h3 data-i18n="secondarySchool">Stredná priemyselná škola technická • Spišská Nová Ves</h3>
+          <p class="muted" data-i18n="secondaryField">Odbor: Programovanie CNC systémov a grafické systémy</p>
+          <ul class="bullets">
+            <li data-i18n="secondary1">Technické štúdium so zameraním na programovanie CNC systémov, technickú dokumentáciu a grafické systémy</li>
+            <li data-i18n="secondary2">Základ pre ďalšie štúdium technických, softvérových a inžinierskych oblastí</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section" id="certifikaty">
       <div class="wrap">
-
         <div class="section-head reveal">
-          <h2>Vzdelanie</h2>
+          <h2 data-i18n="certsTitle">Certifikáty</h2>
+          <p class="muted" data-i18n="certsText">
+            Certifikáty a absolvované kurzy sú dostupné v repozitári. Sekcia sa bude postupne rozširovať spolu s novými kurzami a technickými materiálmi.
+          </p>
         </div>
 
-        <div class="timeline">
-          <div class="t-item card reveal rv1">
-            <div class="t-when">202X –<br>súčasnosť</div>
-            <div class="t-what">
-              <h3>TUKE – FEI</h3>
-              <p class="muted">Odbor: Umelá inteligencia</p>
-              <ul class="bullets">
-                <li>Zameranie: strojové učenie, algoritmy, programovanie</li>
-                <li>Projekty: CN2/ID3, implementácie modelov</li>
-              </ul>
-            </div>
+        <div class="card project reveal rv1">
+          <div class="project-top">
+            <h3 data-i18n="certDataCampTitle">Introduction to Python</h3>
+            <span class="badge academic">DataCamp</span>
           </div>
-
-          <div class="t-item card reveal rv2">
-            <div class="t-when">Doplň</div>
-            <div class="t-what">
-              <h3>Kurzy / certifikáty</h3>
-              <p class="muted">Sem doplníme iba to, čo chceš verejne zdieľať.</p>
-            </div>
+          <p data-i18n="certDataCampDesc">Komplexný kurz zameraný na základy programovacieho jazyka Python s praktickými cvičeniami a projektmi.</p>
+          <div class="project-links">
+            <a class="link" href="Certificates/introduction_to_python.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
           </div>
         </div>
-
       </div>
     </section>
 
     
-    <section class="section" id="prax">
-      <div class="wrap">
 
-        <div class="section-head reveal">
-          <h2>Prax</h2>
-        </div>
-
-        <div class="grid two">
-          <div class="card reveal rv1">
-            <h3>Študentské a projektové skúsenosti</h3>
-            <ul class="bullets">
-              <li>Vývoj webov a aplikácií (responzívnosť, UI komponenty)</li>
-              <li>Deploy a verzovanie (Git/GitHub, Vercel)</li>
-              <li>Debug a optimalizácie UX</li>
-            </ul>
-          </div>
-
-          <div class="card reveal rv2">
-            <h3>IoT a automatizácia</h3>
-            <ul class="bullets">
-              <li>Práca s IoT zariadeniami/senzormi a integrácie</li>
-              <li>Prototypy a testovanie</li>
-              <li>Záujem o smart monitoring riešenia</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    
     <section class="section" id="kontakt">
       <div class="wrap">
-
         <div class="section-head reveal">
-          <h2>Kontakt</h2>
+          <h2 data-i18n="contactTitle">Kontakt</h2>
+          <p class="muted" data-i18n="contactIntro">V prípade spolupráce, stáže alebo technického projektu ma môžeš kontaktovať cez email alebo GitHub.</p>
         </div>
 
         <div class="grid two">
           <div class="card reveal rv1">
-            <h3>Odkazy</h3>
+            <h3 data-i18n="linksTitle">Odkazy</h3>
             <div class="contact">
               <div class="c-row">
-                <span class="c-key">LinkedIn</span>
-                <a class="c-val" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">doplň profil</a>
+                <span class="c-key">Email</span>
+                <a class="c-val" href="mailto:martinsulak18@gmail.com">martinsulak18@gmail.com</a>
               </div>
               <div class="c-row">
                 <span class="c-key">GitHub</span>
                 <a class="c-val" href="https://github.com/martin18f" target="_blank" rel="noreferrer">martin18f</a>
               </div>
+              <div class="c-row">
+                <span class="c-key">Portfolio</span>
+                <a class="c-val" href="https://martin18f.github.io/martinsulakdev/" target="_blank" rel="noreferrer">martinsulakdev</a>
+              </div>
+              <div class="c-row">
+                <span class="c-key">LinkedIn</span>
+                <span class="c-val muted" data-i18n="linkedinContact">bude doplnený</span>
+              </div>
             </div>
           </div>
 
           <div class="card reveal rv2">
-            <h3>Kontaktný formulár</h3>
-
+            <h3 data-i18n="formTitle">Kontaktný formulár</h3>
             <form id="contactForm" class="form" autocomplete="on">
-
               <label class="lbl">
-                Meno
-                <input class="input" name="from_name" placeholder="Tvoje meno" required />
+                <span data-i18n="formName">Meno</span>
+                <input class="input" name="from_name" placeholder="Tvoje meno" required data-i18n-attr="placeholder:formNamePh" />
               </label>
 
               <label class="lbl">
-                Email
-                <input class="input" name="reply_to" type="email" placeholder="tvoj@email.sk" required />
+                <span>Email</span>
+                <input class="input" name="reply_to" type="email" placeholder="tvoj@email.sk" required data-i18n-attr="placeholder:formEmailPh" />
               </label>
 
               <label class="lbl">
-                Predmet
-                <input class="input" name="subject" placeholder="Krátky predmet (voliteľné)" />
+                <span data-i18n="formSubject">Predmet</span>
+                <input class="input" name="subject" placeholder="Krátky predmet" data-i18n-attr="placeholder:formSubjectPh" />
               </label>
 
               <label class="lbl">
-                Správa
-                <textarea class="input" name="message" rows="5" placeholder="Napíš správu..." required></textarea>
+                <span data-i18n="formMessage">Správa</span>
+                <textarea class="input" name="message" rows="5" placeholder="Napíš správu..." required data-i18n-attr="placeholder:formMessagePh"></textarea>
               </label>
 
-              <button class="btn" id="sendBtn" type="submit">Odoslať</button>
+              <button class="btn" id="sendBtn" type="submit" data-i18n="sendBtn">Odoslať</button>
               <p class="muted tiny form-status" id="formStatus" aria-live="polite"></p>
-
-              <p class="muted tiny"></p>
             </form>
           </div>
         </div>
 
         <footer class="footer">
-          <span class="muted tiny">© <span id="year"></span> Martin • CV web</span>
+          <span class="muted tiny">© <span id="year"></span> Martin Šulák • <span data-i18n="footerText">Personal Portfolio • Artificial Intelligence & Software Development</span></span>
         </footer>
-
       </div>
     </section>
-
   </main>
 
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

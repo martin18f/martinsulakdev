@@ -1,0 +1,68 @@
+fis_axis = mamfis( ...
+    "Name","fis_uav_axis", ...
+    "AndMethod","min", ...
+    "OrMethod","max", ...
+    "ImplicationMethod","min", ...
+    "AggregationMethod","max", ...
+    "DefuzzificationMethod","centroid");
+
+% -----------------------------
+% Input 1: error e
+% -----------------------------
+fis_axis = addInput(fis_axis,[-1 1],"Name","e");
+
+fis_axis = addMF(fis_axis,"e","trapmf",[-1 -1 -0.6 -0.05],"Name","N");
+fis_axis = addMF(fis_axis,"e","trimf",[-0.4 0 0.4],"Name","C");
+fis_axis = addMF(fis_axis,"e","trapmf",[0.05 0.6 1 1],"Name","P");
+
+% -----------------------------
+% Input 2: error derivative de
+% -----------------------------
+fis_axis = addInput(fis_axis,[-1 1],"Name","de");
+
+fis_axis = addMF(fis_axis,"de","trapmf",[-1 -1 -0.6 -0.05],"Name","N");
+fis_axis = addMF(fis_axis,"de","trimf",[-0.4 0 0.4],"Name","C");
+fis_axis = addMF(fis_axis,"de","trapmf",[0.05 0.6 1 1],"Name","P");
+
+% -----------------------------
+% Output: normalized output u
+% -----------------------------
+fis_axis = addOutput(fis_axis,[-1 1],"Name","u");
+
+fis_axis = addMF(fis_axis,"u","trapmf",[-1 -1 -0.95 -0.75],"Name","NNNN");
+fis_axis = addMF(fis_axis,"u","trimf",[-0.95 -0.75 -0.50],"Name","NNN");
+fis_axis = addMF(fis_axis,"u","trimf",[-0.75 -0.50 -0.25],"Name","NN");
+fis_axis = addMF(fis_axis,"u","trimf",[-0.50 -0.25 0.00],"Name","N");
+fis_axis = addMF(fis_axis,"u","trimf",[-0.10 0.00 0.10],"Name","C");
+fis_axis = addMF(fis_axis,"u","trimf",[0.00 0.25 0.50],"Name","P");
+fis_axis = addMF(fis_axis,"u","trimf",[0.25 0.50 0.75],"Name","PP");
+fis_axis = addMF(fis_axis,"u","trimf",[0.50 0.75 0.95],"Name","PPP");
+fis_axis = addMF(fis_axis,"u","trapmf",[0.75 0.95 1 1],"Name","PPPP");
+
+% -----------------------------
+% Rules for axis fuzzy controller
+% -----------------------------
+rules = [
+    "e==N & de==N => u=NNNN (1)"
+    "e==N & de==C => u=NNN (1)"
+    "e==N & de==P => u=NN (1)"
+
+    "e==C & de==N => u=N (1)"
+    "e==C & de==C => u=C (1)"
+    "e==C & de==P => u=PP (1)"
+
+    "e==P & de==N => u=PPP (1)"
+    "e==P & de==C => u=PPPP (1)"
+    "e==P & de==P => u=PPPP (1)"
+];
+
+fis_axis = addRule(fis_axis,rules);
+
+if ~exist("SAVE_FIS_TO_FILE", "var")
+    SAVE_FIS_TO_FILE = true;
+end
+
+if SAVE_FIS_TO_FILE
+    writeFIS(fis_axis, "fis_uav_axis.fis");
+    disp("Created fis_uav_axis.fis");
+end
