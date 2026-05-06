@@ -1,0 +1,13 @@
+{
+    "dataset": "/mnt/data/cn2_student_performance/datasets/student_performance_clean.csv",
+    "target_column": "vykon",
+    "beam_width": 5,
+    "min_coverage": 2,
+    "max_rule_length": 4,
+    "train_size": 72,
+    "test_size": 18,
+    "rule_count": 13,
+    "average_rule_cost": 1.8461538461538463,
+    "default_class": "vysoky",
+    "accuracy": 0.9444444444444444
+}

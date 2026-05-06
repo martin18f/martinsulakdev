@@ -1,0 +1,14 @@
+Rule 1: IF dochadzka = vysoka AND dochvilnost = dobra AND domace_ulohy = pravidelne THEN vysoky
+Rule 2: IF dochadzka = nizka AND priprava_pred_skusou = ziadna THEN nizky
+Rule 3: IF aktivita = stredna AND testy = priemerne THEN stredny
+Rule 4: IF dochvilnost = zla AND domace_ulohy = zriedka THEN nizky
+Rule 5: IF pouzivanie_mobilu = nizke AND priprava_pred_skusou = systematicka THEN vysoky
+Rule 6: IF aktivita = vysoka AND testy = priemerne THEN stredny
+Rule 7: IF domace_ulohy = obcas AND pouzivanie_mobilu = stredne THEN stredny
+Rule 8: IF aktivita = vysoka THEN vysoky
+Rule 9: IF spanok = nedostatocny AND testy = slabe THEN nizky
+Rule 10: IF domace_ulohy = pravidelne AND pouzivanie_mobilu = vysoke THEN stredny
+Rule 11: IF dochadzka = stredna AND dochvilnost = priemerna THEN stredny
+Rule 12: IF testy = slabe THEN nizky
+Rule 13: IF dochadzka = nizka THEN nizky
+Default: vysoky

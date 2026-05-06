@@ -1,0 +1,14 @@
+rule_id,rule_text,predicted_class,laplace_score,coverage,class_coverage,cost,consistency,completeness,learned_on_size
+1,IF dochadzka = vysoka AND dochvilnost = dobra AND domace_ulohy = pravidelne THEN vysoky,vysoky,0.875,13,13,3,1.0,0.5416666666666666,72
+2,IF dochadzka = nizka AND priprava_pred_skusou = ziadna THEN nizky,nizky,0.8571428571428571,11,11,2,1.0,0.4583333333333333,59
+3,IF aktivita = stredna AND testy = priemerne THEN stredny,stredny,0.8333333333333334,9,9,2,1.0,0.375,48
+4,IF dochvilnost = zla AND domace_ulohy = zriedka THEN nizky,nizky,0.8,7,7,2,1.0,0.2916666666666667,39
+5,IF pouzivanie_mobilu = nizke AND priprava_pred_skusou = systematicka THEN vysoky,vysoky,0.7777777777777778,6,6,2,1.0,0.25,32
+6,IF aktivita = vysoka AND testy = priemerne THEN stredny,stredny,0.75,5,5,2,1.0,0.20833333333333334,26
+7,IF domace_ulohy = obcas AND pouzivanie_mobilu = stredne THEN stredny,stredny,0.6666666666666666,6,5,2,0.8333333333333334,0.20833333333333334,21
+8,IF aktivita = vysoka THEN vysoky,vysoky,0.6666666666666666,3,3,1,1.0,0.125,15
+9,IF spanok = nedostatocny AND testy = slabe THEN nizky,nizky,0.6666666666666666,3,3,2,1.0,0.125,12
+10,IF domace_ulohy = pravidelne AND pouzivanie_mobilu = vysoke THEN stredny,stredny,0.6,2,2,2,1.0,0.08333333333333333,9
+11,IF dochadzka = stredna AND dochvilnost = priemerna THEN stredny,stredny,0.6,2,2,2,1.0,0.08333333333333333,7
+12,IF testy = slabe THEN nizky,nizky,0.6,2,2,1,1.0,0.08333333333333333,5
+13,IF dochadzka = nizka THEN nizky,nizky,0.4,2,1,1,0.5,0.041666666666666664,3
