@@ -151,8 +151,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       certsTitle: "Certifikáty",
       certsText: "Certifikáty a absolvované kurzy sú dostupné v repozitári. Sekcia sa bude postupne rozširovať spolu s novými kurzami a technickými materiálmi.",
-      certDataCampTitle: "Introduction to Python",
-      certDataCampDesc: "Komplexný kurz zameraný na základy programovacieho jazyka Python s praktickými cvičeniami a projektmi.",
+      certDataCampTitlePython: "Introduction to Python",
+      certDataCampDescPython: "Komplexný kurz zameraný na základy programovacieho jazyka Python s praktickými cvičeniami a projektmi.",
+      certDataCampTitleJavaIntro: "Introduction to Java",
+      certDataCampDescJavaIntro: "Komplexný kurz zameraný na základy programovacieho jazyka Java s praktickými cvičeniami a projektmi.",
+      certDataCampTitleJavaInter: "Intermediate Java",
+      certDataCampDescJavaInter: "Pokročilý kurz programovacieho jazyka Java zameraný na stredne pokročilé témy s praktickými cvičeniami a projektmi.",
       viewCert: "Zobraziť certifikát",
 
       educationTitle: "Vzdelanie",
@@ -359,8 +363,12 @@ secondary2:
 
       certsTitle: "Certifications",
       certsText: "Certifications and completed courses are available in the repository. This section will gradually expand with new courses and learning materials.",
-      certDataCampTitle: "Introduction to Python",
-      certDataCampDesc: "Comprehensive course focused on Python programming fundamentals with practical exercises and projects.",
+      certDataCampTitlePython: "Introduction to Python",
+      certDataCampDescPython: "Comprehensive course focused on Python programming fundamentals with practical exercises and projects.",
+      certDataCampTitleJavaIntro: "Introduction to Java",
+      certDataCampDescJavaIntro: "Comprehensive course focused on Java programming fundamentals with practical exercises and projects.",
+      certDataCampTitleJavaInter: "Intermediate Java",
+      certDataCampDescJavaInter: "Advanced Java programming course focused on intermediate topics with practical exercises and projects.",
       viewCert: "View Certificate",
 
       formTitle: "Contact Form",
