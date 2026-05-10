@@ -157,6 +157,31 @@ document.addEventListener("DOMContentLoaded", () => {
       certDataCampDescJavaIntro: "Komplexný kurz zameraný na základy programovacieho jazyka Java s praktickými cvičeniami a projektmi.",
       certDataCampTitleJavaInter: "Intermediate Java",
       certDataCampDescJavaInter: "Pokročilý kurz programovacieho jazyka Java zameraný na stredne pokročilé témy s praktickými cvičeniami a projektmi.",
+      
+      certCodexJavaTitle: "Java",
+      certCodexJavaDesc: "Objem kurzov od Codédex zameraný na učenie sa Java programovania. Poznámka: Cez GitHub Student Developer Pack som nemohol získať certifikát, pretože na ukončenie projektov a vydanie certifikátu je potrebný ich platený účet. Na obrázku je screenshot z vyplnených častí kurzu.",
+      
+      certMatlabControlTitle: "Control Design Onramp",
+      certMatlabControlDesc: "MathWorks certifikát - úvodný kurz zameraný na základy návrhov riadiacich systémov v MATLAB prostredí.",
+      
+      certMatlabIoTTitle: "Introduction to IoT",
+      certMatlabIoTDesc: "MathWorks certifikát - kurz zameraný na úvod do IoT s praktickými projektmi a aplikáciami.",
+      
+      certMatlabSymbolicTitle: "Introduction to Symbolic Math",
+      certMatlabSymbolicDesc: "MathWorks certifikát - kurz zameraný na symbolickú matematiku a algebraické operácie v MATLAB.",
+      
+      certMatlabOnrampTitle: "MATLAB Onramp",
+      certMatlabOnrampDesc: "MathWorks certifikát - úvodný kurz do MATLAB s praktickými cvičeniami a základnými konceptami.",
+      
+      certMatlabSimulinkTitle: "Simulink Onramp",
+      certMatlabSimulinkDesc: "MathWorks certifikát - úvodný kurz do Simulink simulačného prostredia a modelovania systémov.",
+      
+      certElementsOfAiTitle: "Elements of AI",
+      certElementsOfAiDesc: "Bezplatný kurz zameraný na základy umelej inteligencie a strojového učenia s praktickými príkladmi.",
+      
+      certIoTDigitalTitle: "Introduction to IoT and Digital Transformation",
+      certIoTDigitalDesc: "Kurz zameraný na úvod do IoT technológií a digitálnej transformácie s praktickými aplikáciami.",
+      
       viewCert: "Zobraziť certifikát",
 
       educationTitle: "Vzdelanie",
@@ -369,6 +394,31 @@ secondary2:
       certDataCampDescJavaIntro: "Comprehensive course focused on Java programming fundamentals with practical exercises and projects.",
       certDataCampTitleJavaInter: "Intermediate Java",
       certDataCampDescJavaInter: "Advanced Java programming course focused on intermediate topics with practical exercises and projects.",
+      
+      certCodexJavaTitle: "Java",
+      certCodexJavaDesc: "Collection of courses from Codédex focused on learning Java programming. Note: I was unable to obtain a certificate through the GitHub Student Developer Pack because completing projects and issuing certificates requires their paid account. The image is a screenshot from completed course sections.",
+      
+      certMatlabControlTitle: "Control Design Onramp",
+      certMatlabControlDesc: "MathWorks certification - introductory course focused on control system design fundamentals in MATLAB environment.",
+      
+      certMatlabIoTTitle: "Introduction to IoT",
+      certMatlabIoTDesc: "MathWorks certification - course focused on IoT introduction with practical projects and applications.",
+      
+      certMatlabSymbolicTitle: "Introduction to Symbolic Math",
+      certMatlabSymbolicDesc: "MathWorks certification - course focused on symbolic mathematics and algebraic operations in MATLAB.",
+      
+      certMatlabOnrampTitle: "MATLAB Onramp",
+      certMatlabOnrampDesc: "MathWorks certification - introductory course to MATLAB with practical exercises and fundamental concepts.",
+      
+      certMatlabSimulinkTitle: "Simulink Onramp",
+      certMatlabSimulinkDesc: "MathWorks certification - introductory course to Simulink simulation environment and system modeling.",
+      
+      certElementsOfAiTitle: "Elements of AI",
+      certElementsOfAiDesc: "Free course focused on artificial intelligence fundamentals and machine learning with practical examples.",
+      
+      certIoTDigitalTitle: "Introduction to IoT and Digital Transformation",
+      certIoTDigitalDesc: "Course focused on IoT technologies introduction and digital transformation with practical applications.",
+      
       viewCert: "View Certificate",
 
       formTitle: "Contact Form",
