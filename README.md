@@ -192,7 +192,7 @@ Certifications and completed courses are available inside the repository.
 </p>
 
 - Portfolio: [martinsulakdev](https://martin18f.github.io/martinsulakdev/)
-- LinkedIn: *to be added*
+- LinkedIn: www.linkedin.com/in/martin-šulak-bb9529231
 
 ---
 
