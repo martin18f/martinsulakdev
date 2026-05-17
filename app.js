@@ -164,8 +164,8 @@ document.addEventListener("DOMContentLoaded", () => {
       certMatlabControlTitle: "Control Design Onramp",
       certMatlabControlDesc: "MathWorks certifikát - úvodný kurz zameraný na základy návrhov riadiacich systémov v MATLAB prostredí.",
       
-      certMatlabIoTTitle: "Introduction to IoT",
-      certMatlabIoTDesc: "MathWorks certifikát - kurz zameraný na úvod do IoT s praktickými projektmi a aplikáciami.",
+      certCiscoIoTTitle: "Introduction to IoT",
+      certCiscoIoTDesc: "Cisco certifikát - kurz zameraný na úvod do IoT technológií, sieťových protokolov a praktických aplikácií.",
       
       certMatlabSymbolicTitle: "Introduction to Symbolic Math",
       certMatlabSymbolicDesc: "MathWorks certifikát - kurz zameraný na symbolickú matematiku a algebraické operácie v MATLAB.",
@@ -401,8 +401,8 @@ secondary2:
       certMatlabControlTitle: "Control Design Onramp",
       certMatlabControlDesc: "MathWorks certification - introductory course focused on control system design fundamentals in MATLAB environment.",
       
-      certMatlabIoTTitle: "Introduction to IoT",
-      certMatlabIoTDesc: "MathWorks certification - course focused on IoT introduction with practical projects and applications.",
+      certCiscoIoTTitle: "Introduction to IoT",
+      certCiscoIoTDesc: "Cisco certification - course focused on IoT technologies, networking protocols, and practical applications.",
       
       certMatlabSymbolicTitle: "Introduction to Symbolic Math",
       certMatlabSymbolicDesc: "MathWorks certification - course focused on symbolic mathematics and algebraic operations in MATLAB.",

@@ -988,7 +988,7 @@ span.link.muted:hover {
 }
 
 #projekty .card.project:nth-child(4)::before {
-  background: linear-gradient(90deg, var(--accent3), #ff9f43);
+  background: linear-gradient(90deg, var(--accent3));
   /* Speech Stress Detection - aiml (ružová) */
 }
 
@@ -998,7 +998,7 @@ span.link.muted:hover {
 }
 
 #projekty .card.project:nth-child(6)::before {
-  background: linear-gradient(90deg, var(--accent3), #ff9f43);
+  background: linear-gradient(90deg, var(--accent3));
   /* Machine Learning Project - aiml (ružová) */
 }
 
