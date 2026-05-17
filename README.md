@@ -11,7 +11,7 @@
   <a href="mailto:martinsulak18@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://martin18f.github.io/martinsulakdev/">
+  <a href="https://martinsulak.dev/">
     <img src="https://img.shields.io/badge/Portfolio-Website-2563eb?style=for-the-badge&logo=googlechrome&logoColor=white" />
   </a>
 </p>
@@ -191,7 +191,7 @@ Certifications and completed courses are available inside the repository.
   </a>
 </p>
 
-- Portfolio: [martinsulakdev](https://martin18f.github.io/martinsulakdev/)
+- Portfolio: [martinsulakdev](https://martinsulak.dev/)
 - LinkedIn: www.linkedin.com/in/martin-šulak-bb9529231
 
 ---
