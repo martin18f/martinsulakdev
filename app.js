@@ -693,11 +693,11 @@ secondary2:
   if (year) {
     year.textContent = new Date().getFullYear();
   }
-version) {
+
+  if (version) {
     version.textContent = APP_VERSION;
   }
 
-  if (
   if (skillSearch) {
     skillSearch.addEventListener("input", () => {
       const query = skillSearch.value.trim().toLowerCase();
