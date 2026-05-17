@@ -983,6 +983,38 @@ span.link.muted:hover {
   background: linear-gradient(90deg, #ff6b9d, #ff9f43);
 }
 
+.card.project:nth-child(4)::before {
+  background: linear-gradient(90deg, #7c5cff, #5a8fff);
+}
+
+.card.project:nth-child(5)::before {
+  background: linear-gradient(90deg, var(--accent), #4dd0e1);
+}
+
+.card.project:nth-child(6)::before {
+  background: linear-gradient(90deg, #00d4aa, #13c2c2);
+}
+
+.card.project:nth-child(7)::before {
+  background: linear-gradient(90deg, #facc15, #fbbf24);
+}
+
+.card.project:nth-child(8)::before {
+  background: linear-gradient(90deg, var(--accent3), #ff8fab);
+}
+
+.card.project:nth-child(9)::before {
+  background: linear-gradient(90deg, #8b5fff, #7c5cff);
+}
+
+.card.project:nth-child(10)::before {
+  background: linear-gradient(90deg, #ff9f43, #ffb74d);
+}
+
+.card.project:nth-child(11)::before {
+  background: linear-gradient(90deg, #4dd0e1, #00d4aa);
+}
+
 .project-top {
   display: flex;
   align-items: flex-start;
