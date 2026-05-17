@@ -1283,6 +1283,11 @@ textarea.input {
   overflow-y: visible;
   backdrop-filter: blur(18px) saturate(1.4);
   -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  scrollbar-width: none;
+}
+
+.stack-icons::-webkit-scrollbar {
+  display: none;
 }
 
 .stack-icon {
@@ -1410,11 +1415,15 @@ textarea.input {
   }
 
   .kpi-num {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .kpi-label {
-    font-size: .6rem;
+    font-size: .55rem;
+    white-space: normal;
   }
 
   .t-item {
@@ -1456,7 +1465,48 @@ textarea.input {
   }
 
   .stack-icons {
-    justify-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    overflow-x: visible;
+    gap: .5rem;
+    padding: .8rem 1rem;
+  }
+
+  .stack-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .stack-icon img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .stack-icon:hover {
+    transform: translateY(-4px) scale(1.2);
+  }
+
+  .tech-stack .wrap {
+    padding-inline: 1rem;
+  }
+
+  .stack-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+  .stack-icon img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .stack-icon:hover {
+    transform: translateY(-4px) scale(1.2);
   }
 }
 
