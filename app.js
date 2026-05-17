@@ -772,3 +772,55 @@ secondary2:
     });
   }
 });
+
+const contactForm = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
+const sendBtn = document.getElementById('sendBtn');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(contactForm);
+
+    if (formStatus) {
+      formStatus.textContent = 'Odosielam správu...';
+    }
+
+    if (sendBtn) {
+      sendBtn.disabled = true;
+      sendBtn.textContent = 'Odosielam...';
+    }
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        contactForm.reset();
+
+        if (formStatus) {
+          formStatus.textContent = 'Správa bola úspešne odoslaná.';
+        }
+      } else {
+        if (formStatus) {
+          formStatus.textContent = 'Správu sa nepodarilo odoslať. Skús to znova.';
+        }
+      }
+    } catch (error) {
+      if (formStatus) {
+        formStatus.textContent = 'Nastala chyba pripojenia. Skús to znova neskôr.';
+      }
+    } finally {
+      if (sendBtn) {
+        sendBtn.disabled = false;
+        sendBtn.textContent = 'Odoslať';
+      }
+    }
+  });
+}
