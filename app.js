@@ -7,6 +7,9 @@ function gtag() {
 gtag("js", new Date());
 gtag("config", "G-Z09CQZZVHQ");
 
+// Version management
+const APP_VERSION = "1.0";
+
 document.addEventListener("DOMContentLoaded", () => {
   const topbar = document.getElementById("topbar");
   const navToggle = document.getElementById("navToggle");
@@ -15,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const langBtn = document.getElementById("langBtn");
   const printBtn = document.getElementById("printBtn");
   const year = document.getElementById("year");
+  const version = document.getElementById("version");
   const skillSearch = document.getElementById("skillSearch");
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
@@ -403,7 +407,7 @@ secondary2:
       
       certCiscoIoTTitle: "Introduction to IoT",
       certCiscoIoTDesc: "Cisco certification - course focused on IoT technologies, networking protocols, and practical applications.",
-      
+
       certMatlabSymbolicTitle: "Introduction to Symbolic Math",
       certMatlabSymbolicDesc: "MathWorks certification - course focused on symbolic mathematics and algebraic operations in MATLAB.",
       
@@ -689,7 +693,11 @@ secondary2:
   if (year) {
     year.textContent = new Date().getFullYear();
   }
+version) {
+    version.textContent = APP_VERSION;
+  }
 
+  if (
   if (skillSearch) {
     skillSearch.addEventListener("input", () => {
       const query = skillSearch.value.trim().toLowerCase();
