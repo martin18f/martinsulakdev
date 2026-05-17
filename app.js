@@ -223,10 +223,10 @@ document.addEventListener("DOMContentLoaded", () => {
       sendBtn: "Odoslať",
 
       formSending: "Odosielam správu...",
-      formFallback:
-        "EmailJS nie je nastavený. Otvoril sa e-mailový klient ako náhradné riešenie.",
+      formSendingButton: "Odosielam...",
+      formSuccess: "Správa bola úspešne odoslaná.",
       formError:
-        "Správu sa nepodarilo odoslať. Skús ma kontaktovať priamo cez email.",
+        "Správu sa nepodarilo odoslať. Skús to znova alebo ma kontaktuj priamo cez email.",
 
       footerText:
         "Osobné portfólio • Umelá inteligencia & vývoj softvéru",
@@ -432,10 +432,10 @@ secondary2:
       sendBtn: "Send",
 
       formSending: "Sending message...",
-      formFallback:
-        "EmailJS is not configured. Your email client has been opened as a fallback.",
+      formSendingButton: "Sending...",
+      formSuccess: "Message sent successfully.",
       formError:
-        "The message could not be sent. Please contact me directly by email.",
+        "The message could not be sent. Try again or contact me directly by email.",
 
       footerText:
         "Personal Portfolio • Artificial Intelligence & Software Development",
@@ -719,15 +719,11 @@ secondary2:
 
       const activeLanguage = getCurrentLanguage();
       const dict = translations[activeLanguage] || translations.sk;
-
       const formData = new FormData(contactForm);
-      const name = String(formData.get("from_name") || "");
-      const email = String(formData.get("reply_to") || "");
-      const subject = String(formData.get("subject") || "Portfolio contact");
-      const message = String(formData.get("message") || "");
 
       if (sendBtn) {
         sendBtn.disabled = true;
+        sendBtn.textContent = dict.formSendingButton;
       }
 
       if (formStatus) {
@@ -735,92 +731,33 @@ secondary2:
       }
 
       try {
-        /*
-          EmailJS setup:
-          Ak chceš reálne posielanie cez EmailJS, doplň svoje údaje:
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        });
 
-          emailjs.init("PUBLIC_KEY");
+        if (!response.ok) {
+          throw new Error(`Form submit failed with status ${response.status}`);
+        }
 
-          await emailjs.send("SERVICE_ID", "TEMPLATE_ID", {
-            from_name: name,
-            reply_to: email,
-            subject,
-            message,
-          });
-
-          Potom odstráň riadok:
-          throw new Error("EmailJS is not configured.");
-        */
-
-        throw new Error("EmailJS is not configured.");
-      } catch (error) {
-        const mailtoSubject = encodeURIComponent(subject);
-        const mailtoBody = encodeURIComponent(
-          `Name: ${name}\nEmail: ${email}\n\n${message}`
-        );
-
-        window.location.href = `mailto:martinsulak18@gmail.com?subject=${mailtoSubject}&body=${mailtoBody}`;
+        contactForm.reset();
 
         if (formStatus) {
-          formStatus.textContent = dict.formFallback;
+          formStatus.textContent = dict.formSuccess;
+        }
+      } catch (error) {
+        if (formStatus) {
+          formStatus.textContent = dict.formError;
         }
       } finally {
         if (sendBtn) {
           sendBtn.disabled = false;
+          sendBtn.textContent = dict.sendBtn;
         }
       }
     });
   }
 });
-
-const contactForm = document.getElementById('contactForm');
-const formStatus = document.getElementById('formStatus');
-const sendBtn = document.getElementById('sendBtn');
-
-if (contactForm) {
-  contactForm.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    const formData = new FormData(contactForm);
-
-    if (formStatus) {
-      formStatus.textContent = 'Odosielam správu...';
-    }
-
-    if (sendBtn) {
-      sendBtn.disabled = true;
-      sendBtn.textContent = 'Odosielam...';
-    }
-
-    try {
-      const response = await fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json'
-        }
-      });
-
-      if (response.ok) {
-        contactForm.reset();
-
-        if (formStatus) {
-          formStatus.textContent = 'Správa bola úspešne odoslaná.';
-        }
-      } else {
-        if (formStatus) {
-          formStatus.textContent = 'Správu sa nepodarilo odoslať. Skús to znova.';
-        }
-      }
-    } catch (error) {
-      if (formStatus) {
-        formStatus.textContent = 'Nastala chyba pripojenia. Skús to znova neskôr.';
-      }
-    } finally {
-      if (sendBtn) {
-        sendBtn.disabled = false;
-        sendBtn.textContent = 'Odoslať';
-      }
-    }
-  });
-}

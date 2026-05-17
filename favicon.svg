@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Martin Sulak logo">
+  <defs>
+    <linearGradient id="avatarGradient" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#64ffd4"/>
+      <stop offset="1" stop-color="#5a8fff"/>
+    </linearGradient>
+    <filter id="avatarGlow" x="-35%" y="-35%" width="170%" height="170%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#64ffd4" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <circle cx="32" cy="32" r="29" fill="url(#avatarGradient)" filter="url(#avatarGlow)"/>
+  <text
+    x="32"
+    y="33"
+    fill="#000"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="Syne, Arial Black, Arial, sans-serif"
+    font-size="24"
+    font-weight="800">M</text>
+</svg>
