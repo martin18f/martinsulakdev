@@ -23,6 +23,65 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
   const sendBtn = document.getElementById("sendBtn");
+  const root = document.documentElement;
+
+  const setupInteractiveBackground = () => {
+    let animationFrame = 0;
+    let activeTimer = 0;
+    let latestX = window.innerWidth * 0.5;
+    let latestY = window.innerHeight * 0.34;
+
+    const setBackgroundPosition = (x, y) => {
+      const width = window.innerWidth || 1;
+      const height = window.innerHeight || 1;
+      const offsetX = ((x / width) - 0.5) * 22;
+      const offsetY = ((y / height) - 0.5) * 22;
+
+      root.style.setProperty("--pointer-x", `${x}px`);
+      root.style.setProperty("--pointer-y", `${y}px`);
+      root.style.setProperty("--bg-x", `${offsetX.toFixed(2)}px`);
+      root.style.setProperty("--bg-y", `${offsetY.toFixed(2)}px`);
+      root.style.setProperty("--bg-x-inverse", `${(-offsetX).toFixed(2)}px`);
+      root.style.setProperty("--bg-y-inverse", `${(-offsetY).toFixed(2)}px`);
+    };
+
+    const queueBackgroundPosition = (event) => {
+      latestX = event.clientX;
+      latestY = event.clientY;
+
+      if (animationFrame) return;
+
+      animationFrame = window.requestAnimationFrame(() => {
+        setBackgroundPosition(latestX, latestY);
+        animationFrame = 0;
+      });
+    };
+
+    const pulseBackground = () => {
+      root.classList.add("bg-active");
+      window.clearTimeout(activeTimer);
+      activeTimer = window.setTimeout(() => {
+        root.classList.remove("bg-active");
+      }, 650);
+    };
+
+    const updateScrollShift = () => {
+      root.style.setProperty("--scroll-shift", `${(window.scrollY * -0.035).toFixed(2)}px`);
+    };
+
+    setBackgroundPosition(window.innerWidth * 0.5, window.innerHeight * 0.34);
+    updateScrollShift();
+
+    window.addEventListener("pointermove", queueBackgroundPosition, { passive: true });
+    window.addEventListener("pointerdown", pulseBackground, { passive: true });
+    window.addEventListener("scroll", updateScrollShift, { passive: true });
+    window.addEventListener("resize", () => {
+      setBackgroundPosition(window.innerWidth * 0.5, window.innerHeight * 0.34);
+      updateScrollShift();
+    }, { passive: true });
+  };
+
+  setupInteractiveBackground();
 
   
 
@@ -38,6 +97,8 @@ document.addEventListener("DOMContentLoaded", () => {
       openNav: "Otvoriť navigáciu",
       quickInfo: "Rýchle informácie",
       techStackAria: "Technologický stack",
+      stackEyebrow: "Tech stack",
+      stackIntro: "Technológie, ktoré používam pri webových, AI/ML a engineering projektoch.",
       langBtnAria: "Prepnúť do angličtiny",
       themeAria: "Prepnúť tému",
 
@@ -247,6 +308,8 @@ document.addEventListener("DOMContentLoaded", () => {
       openNav: "Open navigation",
       quickInfo: "Quick information",
       techStackAria: "Technology stack",
+      stackEyebrow: "Tech stack",
+      stackIntro: "Tools I use across web, AI/ML, and engineering projects.",
       langBtnAria: "Switch to Slovak",
       themeAria: "Switch theme",
 
