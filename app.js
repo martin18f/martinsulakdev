@@ -183,10 +183,11 @@ document.addEventListener("DOMContentLoaded", () => {
       fuely3: "Samostatný repozitár a live demo",
 
       desktopWidgetDesc:
-        "Electron aplikácia na pripnutie interaktívneho webového obsahu priamo na plochu ako presúvateľné a vrstviteľné widgety.",
+        "Komerčná Windows aplikácia na pripnutie interaktívneho webového obsahu priamo na plochu ako presúvateľné a vrstviteľné widgety.",
       desktopWidget1: "Viac widgetov s vlastnou URL, opacitou a vrstvou",
       desktopWidget2: "Snapovanie, vodiace čiary a externý edit panel",
-      desktopWidget3: "Samostatný repozitár s dokumentáciou a build skriptami",
+      desktopWidget3: "Pripravované na Gumroad a Microsoft Store",
+      desktopWidgetComingSoon: "Odkazy na kúpu čoskoro",
 
       stressTitle: "Detekcia stresu z reči",
       stressDesc:
@@ -400,10 +401,11 @@ document.addEventListener("DOMContentLoaded", () => {
       fuely3: "Separate repository and live demo",
 
       desktopWidgetDesc:
-        "Electron app for pinning interactive web content directly on the desktop as movable and layered widgets.",
+        "Commercial Windows app for pinning interactive web content directly on the desktop as movable and layered widgets.",
       desktopWidget1: "Multiple widgets with their own URL, opacity and layer",
       desktopWidget2: "Snapping, guide lines and an external edit panel",
-      desktopWidget3: "Separate repository with documentation and build scripts",
+      desktopWidget3: "Coming soon on Gumroad and Microsoft Store",
+      desktopWidgetComingSoon: "Purchase links coming soon",
 
       stressTitle: "Speech Stress Detection",
       stressDesc:
