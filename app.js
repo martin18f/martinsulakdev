@@ -186,8 +186,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Komerčná Windows aplikácia na pripnutie interaktívneho webového obsahu priamo na plochu ako presúvateľné a vrstviteľné widgety.",
       desktopWidget1: "Viac widgetov s vlastnou URL, opacitou a vrstvou",
       desktopWidget2: "Snapovanie, vodiace čiary a externý edit panel",
-      desktopWidget3: "Pripravované na Gumroad a Microsoft Store",
-      desktopWidgetComingSoon: "Odkazy na kúpu čoskoro",
+      desktopWidget3: "Dostupné cez Gumroad, Microsoft Store sa pripravuje",
+      desktopWidgetBuyGumroad: "Kúpiť na Gumroad",
 
       stressTitle: "Detekcia stresu z reči",
       stressDesc:
@@ -404,8 +404,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Commercial Windows app for pinning interactive web content directly on the desktop as movable and layered widgets.",
       desktopWidget1: "Multiple widgets with their own URL, opacity and layer",
       desktopWidget2: "Snapping, guide lines and an external edit panel",
-      desktopWidget3: "Coming soon on Gumroad and Microsoft Store",
-      desktopWidgetComingSoon: "Purchase links coming soon",
+      desktopWidget3: "Available on Gumroad, Microsoft Store coming soon",
+      desktopWidgetBuyGumroad: "Buy on Gumroad",
 
       stressTitle: "Speech Stress Detection",
       stressDesc:
