@@ -182,6 +182,12 @@ document.addEventListener("DOMContentLoaded", () => {
       fuely2: "Výpočty, formuláre a validácia vstupov",
       fuely3: "Samostatný repozitár a live demo",
 
+      desktopWidgetDesc:
+        "Electron aplikácia na pripnutie interaktívneho webového obsahu priamo na plochu ako presúvateľné a vrstviteľné widgety.",
+      desktopWidget1: "Viac widgetov s vlastnou URL, opacitou a vrstvou",
+      desktopWidget2: "Snapovanie, vodiace čiary a externý edit panel",
+      desktopWidget3: "Samostatný repozitár s dokumentáciou a build skriptami",
+
       stressTitle: "Detekcia stresu z reči",
       stressDesc:
         "Projekt s neurónovou sieťou zameraný na detekciu stresu z rečových dát pomocou neuronových sietí a audio príznakov.",
@@ -392,6 +398,12 @@ document.addEventListener("DOMContentLoaded", () => {
       fuely1: "React application with a clean user interface",
       fuely2: "Calculations, forms and input validation",
       fuely3: "Separate repository and live demo",
+
+      desktopWidgetDesc:
+        "Electron app for pinning interactive web content directly on the desktop as movable and layered widgets.",
+      desktopWidget1: "Multiple widgets with their own URL, opacity and layer",
+      desktopWidget2: "Snapping, guide lines and an external edit panel",
+      desktopWidget3: "Separate repository with documentation and build scripts",
 
       stressTitle: "Speech Stress Detection",
       stressDesc:

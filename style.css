@@ -1056,43 +1056,38 @@ span.link.muted:hover {
   opacity: 1;
 }
 
-/* Projekty - farby podľa badgov */
 #projekty .card.project:nth-child(1)::before {
   background: linear-gradient(90deg, var(--accent), #00d4aa);
-  /* PP AUTO - web (zelená) */
 }
 
 #projekty .card.project:nth-child(2)::before {
   background: linear-gradient(90deg, var(--accent), #00d4aa);
-  /* Autoškola Roka - web (zelená) */
 }
 
 #projekty .card.project:nth-child(3)::before {
   background: linear-gradient(90deg, var(--accent2), #5a8fff);
-  /* Fuely - app (modrá) */
 }
 
 #projekty .card.project:nth-child(4)::before {
-  background: linear-gradient(90deg, var(--accent3));
-  /* Speech Stress Detection - aiml (ružová) */
+  background: linear-gradient(90deg, var(--accent2), #5a8fff);
 }
 
 #projekty .card.project:nth-child(5)::before {
-  background: linear-gradient(90deg, #c084fc, #9d4edd);
-  /* UAV Control System - system (purpurová) */
+  background: linear-gradient(90deg, var(--accent3));
 }
 
 #projekty .card.project:nth-child(6)::before {
-  background: linear-gradient(90deg, var(--accent3));
-  /* Machine Learning Project - aiml (ružová) */
+  background: linear-gradient(90deg, #c084fc, #9d4edd);
 }
 
 #projekty .card.project:nth-child(7)::before {
-  background: linear-gradient(90deg, #facc15, #fbbf24);
-  /* Academic Assignments - academic (žltá) */
+  background: linear-gradient(90deg, var(--accent3));
 }
 
-/* Certifikáty - všetky academic (žltá) */
+#projekty .card.project:nth-child(8)::before {
+  background: linear-gradient(90deg, #facc15, #fbbf24);
+}
+
 #certifikaty .card.project::before {
   background: linear-gradient(90deg, #facc15, #fbbf24);
 }
