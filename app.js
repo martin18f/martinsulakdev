@@ -1,13 +1,23 @@
-window.dataLayer = window.dataLayer || [];
-
-function gtag() {
-  window.dataLayer.push(arguments);
-}
-
-gtag("js", new Date());
-gtag("config", "G-Z09CQZZVHQ");
-
 const APP_VERSION = "1.0";
+const ANALYTICS_ID = "G-Z09CQZZVHQ";
+
+const loadAnalytics = () => {
+  if (window.__portfolioAnalyticsLoaded) return;
+
+  window.__portfolioAnalyticsLoaded = true;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+
+  window.gtag("js", new Date());
+  window.gtag("config", ANALYTICS_ID);
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`;
+  document.head.append(script);
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   const topbar = document.getElementById("topbar");
@@ -25,6 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const root = document.documentElement;
 
   const setupInteractiveBackground = () => {
+    const canAnimateBackdrop = window.matchMedia("(hover: hover) and (pointer: fine) and (min-width: 768px)").matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let animationFrame = 0;
     let activeTimer = 0;
     let latestX = window.innerWidth * 0.5;
@@ -69,6 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     setBackgroundPosition(window.innerWidth * 0.5, window.innerHeight * 0.34);
+
+    if (!canAnimateBackdrop || prefersReducedMotion) return;
+
     updateScrollShift();
 
     window.addEventListener("pointermove", queueBackgroundPosition, { passive: true });
@@ -82,7 +97,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setupInteractiveBackground();
 
-  
+  const scheduleAnalytics = () => {
+    const run = () => {
+      const delayedLoad = () => window.setTimeout(loadAnalytics, 1800);
+
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(delayedLoad, { timeout: 4000 });
+      } else {
+        delayedLoad();
+      }
+    };
+
+    if (document.readyState === "complete") {
+      run();
+    } else {
+      window.addEventListener("load", run, { once: true });
+    }
+  };
+
+  scheduleAnalytics();
+
 
   const translations = {
     sk: {
