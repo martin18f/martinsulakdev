@@ -149,7 +149,7 @@ Additional information about projects can be found inside the corresponding fold
 | Job Project | PP AUTO | Automotive dealership website project | [Live Website](https://ppauto.sk) |
 | Job Project | Autoškola Roka | Driving school website project | [Live Website](https://www.autoskolaroka.sk/) |
 | Personal Project | Fuely | Fuel cost calculator web application | [Repository](https://github.com/martin18f/fuely) • [Live Demo](https://fuely.martinsulak.dev/) |
-| Commercial Project | Desktop Web Widget | Windows app for pinning interactive web widgets on the desktop | [Buy on Gumroad](https://martinsulak.gumroad.com/l/desktop-web-widget) |
+| Commercial Project | Desktop Web Widget | Windows app for pinning interactive web widgets on the desktop | [Product Website](https://desktop-web-widget.martinsulak.dev/) • [Buy on Gumroad](https://martinsulak.gumroad.com/l/desktop-web-widget) |
 | Academic Project | Speech Stress Detection | Neural network project for speech-based stress detection | [Repository](https://github.com/adrianzbur/ns-projekt-dsrs) |
 | Academic Project | UAV Control System | UAV simulation and fuzzy control project | Available in this repository |
 | Academic Project | Machine Learning Project | Machine learning academic project and experiments | Available in this repository |

@@ -7,7 +7,6 @@ function gtag() {
 gtag("js", new Date());
 gtag("config", "G-Z09CQZZVHQ");
 
-// Version management
 const APP_VERSION = "1.0";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -87,9 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const translations = {
     sk: {
-      metaTitle: "Martin Šulák • AI študent • Portfólio",
+      metaTitle: "Martin Šulák | AI študent a software developer",
       metaDescription:
-        "Osobné portfólio Martina Šuláka — študenta umelej inteligencie so zameraním na vývoj softvéru, AI/ML projekty, riadiace systémy, IoT a moderné webové technológie.",
+        "Osobné portfólio Martina Šuláka, študenta umelej inteligencie a software developera so zameraním na web, AI/ML, riadiace systémy, IoT a komerčný projekt Desktop Web Widget.",
 
       skip: "Preskočiť na obsah",
 
@@ -186,7 +185,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Komerčná Windows aplikácia na pripnutie interaktívneho webového obsahu priamo na plochu ako presúvateľné a vrstviteľné widgety.",
       desktopWidget1: "Viac widgetov s vlastnou URL, opacitou a vrstvou",
       desktopWidget2: "Snapovanie, vodiace čiary a externý edit panel",
-      desktopWidget3: "Dostupné cez Gumroad, Microsoft Store sa pripravuje",
+      desktopWidget3: "Produktová stránka, QR platba a Gumroad nákup",
+      desktopWidgetProductSite: "Produktová stránka",
       desktopWidgetBuyGumroad: "Kúpiť na Gumroad",
 
       stressTitle: "Detekcia stresu z reči",
@@ -305,9 +305,9 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     en: {
-      metaTitle: "Martin Šulák • AI Student • Portfolio",
+      metaTitle: "Martin Šulák | AI Student And Software Developer",
       metaDescription:
-        "Personal portfolio of Martin Šulák — Artificial Intelligence student focused on software development, AI/ML projects, control systems, IoT, and modern web technologies.",
+        "Personal portfolio of Martin Šulák, an Artificial Intelligence student and software developer building web, AI/ML, control systems, IoT, and commercial projects including Desktop Web Widget.",
 
       skip: "Skip to content",
 
@@ -404,7 +404,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "Commercial Windows app for pinning interactive web content directly on the desktop as movable and layered widgets.",
       desktopWidget1: "Multiple widgets with their own URL, opacity and layer",
       desktopWidget2: "Snapping, guide lines and an external edit panel",
-      desktopWidget3: "Available on Gumroad, Microsoft Store coming soon",
+      desktopWidget3: "Product website, QR payment and Gumroad checkout",
+      desktopWidgetProductSite: "Product Website",
       desktopWidgetBuyGumroad: "Buy on Gumroad",
 
       stressTitle: "Speech Stress Detection",
@@ -666,6 +667,8 @@ secondary2:
     document.documentElement.lang = lang;
     document.title = dict.metaTitle;
     setMetaContent('meta[name="description"]', dict.metaDescription);
+    setMetaContent('meta[property="og:description"]', dict.metaDescription);
+    setMetaContent('meta[name="twitter:description"]', dict.metaDescription);
 
     applyTextTranslations(lang);
     applyAttributeTranslations(lang);
