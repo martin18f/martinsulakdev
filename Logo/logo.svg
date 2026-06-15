@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="sk" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logo Martin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    #martin-sulak-logo-widget {
+      --martin-logo-bg: #050508;
+      --martin-logo-accent: #64ffd4;
+      --martin-logo-accent-secondary: #5a8fff;
+      --martin-logo-glow: rgba(100,255,212,0.13);
+      --martin-logo-text: #eaeaf8;
+      --martin-logo-text-muted: #7878a0;
+
+      --martin-logo-font-head: 'Syne', sans-serif;
+      --martin-logo-font-body: 'DM Sans', sans-serif;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--martin-logo-font-body);
+    }
+
+    #martin-sulak-logo-widget,
+    #martin-sulak-logo-widget *::before,
+    #martin-sulak-logo-widget *::after,
+    #martin-sulak-logo-widget * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .martin-sulak-logo-link {
+      display: inline-block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .martin-sulak-logo-avatar {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: linear-gradient(
+        135deg,
+        var(--martin-logo-accent) 0%,
+        var(--martin-logo-accent-secondary) 100%
+      );
+      display: grid;
+      place-items: center;
+      font-family: var(--martin-logo-font-head);
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #000;
+      flex-shrink: 0;
+      box-shadow: 0 0 28px var(--martin-logo-glow);
+      transition: box-shadow .3s, transform .3s;
+    }
+
+    .martin-sulak-logo-avatar:hover {
+      box-shadow: 
+        0 0 44px var(--martin-logo-glow), 
+        0 0 0 3px var(--martin-logo-accent);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="martin-sulak-logo-widget">
+    <a href="https://martinsulak.dev" class="martin-sulak-logo-link" aria-label="Prejsť na martinsulak.dev">
+      <div class="martin-sulak-logo-avatar" aria-hidden="true">M</div>
+    </a>
+  </div>
+</body>
+</html>
