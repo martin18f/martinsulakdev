@@ -5,23 +5,30 @@
      crossorigin="anonymous"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Martin Šulák | AI Student And Software Developer Portfolio</title>
-  <meta name="description" content="Personal portfolio of Martin Šulák, an Artificial Intelligence student and software developer building web, AI/ML, control systems, IoT, and commercial projects including Desktop Web Widget." />
+  <title>Martin Šulák | AI študent, web a software developer</title>
+  <meta name="description" content="Portfólio Martina Šuláka: AI študent a software developer pre webové aplikácie, AI/ML projekty, IoT, riadiace systémy a technické projekty." />
+  <meta name="keywords" content="Martin Šulák, AI študent, software developer, web developer, AI/ML projekty, IoT, riadiace systémy, portfólio" />
   <meta name="author" content="Martin Šulák" />
   <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Martin Šulák | AI Student, Software Developer And Technical Projects" />
-  <meta property="og:description" content="Portfolio of Martin Šulák, an Artificial Intelligence student building software, AI/ML, control systems, IoT, and web projects including Desktop Web Widget." />
+  <meta property="og:title" content="Martin Šulák | AI študent, web a software developer" />
+  <meta property="og:description" content="Portfólio Martina Šuláka: AI študent a software developer pre webové aplikácie, AI/ML projekty, IoT, riadiace systémy a technické projekty." />
   <meta property="og:url" content="https://martinsulak.dev/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Martin Šulák Portfolio" />
+  <meta property="og:locale" content="sk_SK" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:image" content="https://martinsulak.dev/favicon.svg" />
   <meta property="og:image:alt" content="Martin Šulák portfolio" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Martin Šulák | AI Student And Software Developer" />
-  <meta name="twitter:description" content="Portfolio of Martin Šulák with software, AI/ML, control systems, IoT, and web projects." />
+  <meta name="twitter:title" content="Martin Šulák | AI študent, web a software developer" />
+  <meta name="twitter:description" content="Portfólio Martina Šuláka: AI študent a software developer pre webové aplikácie, AI/ML projekty, IoT, riadiace systémy a technické projekty." />
   <meta name="twitter:image" content="https://martinsulak.dev/favicon.svg" />
   <meta name="twitter:image:alt" content="Martin Šulák portfolio" />
+  <meta name="theme-color" content="#050508" />
   <link rel="canonical" href="https://martinsulak.dev/" />
+  <link rel="alternate" hreflang="sk" href="https://martinsulak.dev/" />
+  <link rel="alternate" hreflang="en" href="https://martinsulak.dev/?lang=en" />
+  <link rel="alternate" hreflang="x-default" href="https://martinsulak.dev/" />
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
@@ -33,19 +40,27 @@
           "@type": "Person",
           "@id": "https://martinsulak.dev/#person",
           "name": "Martin Šulák",
+          "alternateName": "martin18f",
           "url": "https://martinsulak.dev/",
+          "description": "AI študent a software developer zameraný na webové aplikácie, AI/ML projekty, IoT, riadiace systémy a technické portfólio.",
           "sameAs": [
             "https://github.com/martin18f",
-            "https://www.linkedin.com/in/martin-šulak-bb9529231"
+            "www.linkedin.com/in/martin-šulák-77147a417"
           ],
           "jobTitle": "Artificial Intelligence Student and Software Developer",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Technical University of Košice, Faculty of Electrical Engineering and Informatics",
+            "url": "https://www.fei.tuke.sk/"
+          },
+          "knowsLanguage": ["sk", "en"],
           "knowsAbout": [
             "Software development",
+            "Web development",
             "Artificial intelligence",
             "Machine learning",
             "Control systems",
-            "IoT",
-            "Web development"
+            "IoT"
           ]
         },
         {
@@ -53,15 +68,33 @@
           "@id": "https://martinsulak.dev/#website",
           "name": "Martin Šulák Portfolio",
           "url": "https://martinsulak.dev/",
+          "description": "Portfolio website of Martin Šulák with web, AI/ML, control systems, IoT and engineering projects.",
           "inLanguage": ["sk", "en"],
           "author": {
             "@id": "https://martinsulak.dev/#person"
           }
         },
         {
+          "@type": "ProfilePage",
+          "@id": "https://martinsulak.dev/#profile-page",
+          "url": "https://martinsulak.dev/",
+          "name": "Martin Šulák | AI študent, web a software developer",
+          "description": "Portfólio Martina Šuláka: AI študent a software developer pre webové aplikácie, AI/ML projekty, IoT, riadiace systémy a technické projekty.",
+          "inLanguage": "sk",
+          "isPartOf": {
+            "@id": "https://martinsulak.dev/#website"
+          },
+          "about": {
+            "@id": "https://martinsulak.dev/#person"
+          },
+          "mainEntity": {
+            "@id": "https://martinsulak.dev/#person"
+          }
+        },
+        {
           "@type": "ItemList",
           "@id": "https://martinsulak.dev/#projects",
-          "name": "Highlighted projects by Martin Šulák",
+          "name": "Web, AI/ML and engineering projects by Martin Šulák",
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -75,6 +108,15 @@
             {
               "@type": "ListItem",
               "position": 2,
+              "item": {
+                "@type": "WebSite",
+                "name": "Autoškola Roka",
+                "url": "https://www.autoskolaroka.sk/"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
               "item": {
                 "@type": "SoftwareApplication",
                 "name": "Desktop Web Widget",
@@ -144,7 +186,7 @@
 
           <h1>
             <span class="grad">Martin Šulák</span>
-            <small data-i18n="heroSubtitle">Študent umelej inteligencie • FEI TUKE</small>
+            <small data-i18n="heroSubtitle">AI študent a software developer • FEI TUKE</small>
           </h1>
 
           <p class="lead" data-i18n="heroLead">
@@ -160,11 +202,11 @@
           </div>
 
           <div class="links">
-            <a class="link" href="https://github.com/martin18f" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="link" href="https://github.com/martin18f" target="_blank" rel="me noopener noreferrer">GitHub</a>
             <span class="sep">•</span>
             <a class="link" href="https://martinsulak.dev/" target="_blank" rel="noreferrer" data-i18n="portfolioLink">Portfólio</a>
             <span class="sep">•</span>
-            <a class="link" href="https://www.linkedin.com/in/martin-šulak-bb9529231" target="_blank" rel="noreferrer">
+            <a class="link" href="www.linkedin.com/in/martin-šulák-77147a417" target="_blank" rel="me noopener noreferrer">
             LinkedIn
           </a>
           </div>
@@ -205,63 +247,63 @@
           <div class="stack-panel">
 
             <ul class="stack-icons" role="list">
-              <li class="stack-icon" style="--tech-rgb: 227, 79, 38;">
-                <img src="assets/icons/html.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-html">
+                <img src="assets/icons/html.svg" width="38" height="38" alt="HTML icon" loading="lazy" decoding="async" />
                 <span class="stack-label">HTML</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 21, 114, 182;">
-                <img src="assets/icons/css.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-css">
+                <img src="assets/icons/css.svg" width="38" height="38" alt="CSS icon" loading="lazy" decoding="async" />
                 <span class="stack-label">CSS</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 247, 223, 30;">
-                <img src="assets/icons/js.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-js">
+                <img src="assets/icons/js.svg" width="38" height="38" alt="JavaScript icon" loading="lazy" decoding="async" />
                 <span class="stack-label">JavaScript</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 97, 218, 251;">
-                <img src="assets/icons/react.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-react">
+                <img src="assets/icons/react.svg" width="38" height="38" alt="React icon" loading="lazy" decoding="async" />
                 <span class="stack-label">React</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 53, 114, 165;">
-                <img src="assets/icons/python.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-python">
+                <img src="assets/icons/python.svg" width="38" height="38" alt="Python icon" loading="lazy" decoding="async" />
                 <span class="stack-label">Python</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 237, 139, 0;">
-                <img src="assets/icons/java.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-java">
+                <img src="assets/icons/java.svg" width="38" height="38" alt="Java icon" loading="lazy" decoding="async" />
                 <span class="stack-label">Java</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 92, 107, 192;">
-                <img src="assets/icons/c.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-c">
+                <img src="assets/icons/c.svg" width="38" height="38" alt="C programming icon" loading="lazy" decoding="async" />
                 <span class="stack-label">C</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 0, 117, 143;">
-                <img src="assets/icons/mysql.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-mysql">
+                <img src="assets/icons/mysql.svg" width="38" height="38" alt="MySQL icon" loading="lazy" decoding="async" />
                 <span class="stack-label">MySQL</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 237, 120, 36;">
-                <img src="assets/icons/matlab.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-matlab">
+                <img src="assets/icons/matlab.svg" width="38" height="38" alt="MATLAB icon" loading="lazy" decoding="async" />
                 <span class="stack-label">MATLAB</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 0, 122, 204;">
-                <img src="assets/icons/vscode.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-vscode">
+                <img src="assets/icons/vscode.svg" width="38" height="38" alt="Visual Studio Code icon" loading="lazy" decoding="async" />
                 <span class="stack-label">VS Code</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 240, 80, 51;">
-                <img src="assets/icons/git.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-git">
+                <img src="assets/icons/git.svg" width="38" height="38" alt="Git icon" loading="lazy" decoding="async" />
                 <span class="stack-label">Git</span>
               </li>
 
-              <li class="stack-icon" style="--tech-rgb: 181, 191, 204;">
-                <img src="assets/icons/github.svg" width="38" height="38" alt="" aria-hidden="true" loading="lazy" decoding="async" />
+              <li class="stack-icon tech-github">
+                <img src="assets/icons/github.svg" width="38" height="38" alt="GitHub icon" loading="lazy" decoding="async" />
                 <span class="stack-label">GitHub</span>
               </li>
             </ul>
@@ -271,7 +313,7 @@
     <section class="section" id="profil">
       <div class="wrap">
         <div class="section-head reveal">
-          <h2 data-i18n="profileTitle">Profil</h2>
+          <h2 data-i18n="profileTitle">Profil AI študenta</h2>
           <p data-i18n="profileText">
             Študujem umelú inteligenciu na Fakulte elektrotechniky a informatiky Technickej univerzity v Košiciach.
             Venujem sa web developmentu, AI/ML projektom, riadiacim systémom a IoT. Mojím cieľom je budovať technické projekty,
@@ -308,7 +350,7 @@
       <div class="wrap">
         <div class="section-head row reveal">
           <div>
-            <h2 data-i18n="skillsTitle">Zručnosti</h2>
+            <h2 data-i18n="skillsTitle">Technické zručnosti</h2>
             <p class="muted" data-i18n="skillsHint">Vyhľadávanie zvýrazní relevantné technológie a tagy.</p>
           </div>
           <div class="skill-controls">
@@ -359,7 +401,7 @@
     <section class="section" id="projekty">
       <div class="wrap">
         <div class="section-head reveal">
-          <h2 data-i18n="projectsTitle">Projekty</h2>
+          <h2 data-i18n="projectsTitle">Web, AI/ML a engineering projekty</h2>
           <p class="muted" data-i18n="projectsIntro">
             Vybrané projekty a repozitáre. Niektoré sú priamo v tomto portfóliu, iné majú vlastný repozitár alebo verejný live link.
           </p>
@@ -508,7 +550,7 @@
     <section class="section" id="vzdelanie">
   <div class="wrap">
     <div class="section-head reveal">
-      <h2 data-i18n="educationTitle">Vzdelanie</h2>
+      <h2 data-i18n="educationTitle">Vzdelanie v umelej inteligencii</h2>
     </div>
 
     <div class="timeline">
@@ -542,7 +584,7 @@
     <section class="section" id="certifikaty">
       <div class="wrap">
         <div class="section-head reveal">
-          <h2 data-i18n="certsTitle">Certifikáty</h2>
+          <h2 data-i18n="certsTitle">Certifikáty a kurzy</h2>
           <p class="muted" data-i18n="certsText">
             Certifikáty a absolvované kurzy sú dostupné v repozitári. Sekcia sa bude postupne rozširovať spolu s novými kurzami a technickými materiálmi.
           </p>
@@ -556,7 +598,7 @@
             </div>
             <p data-i18n="certDataCampDescPython">Komplexný kurz zameraný na základy programovacieho jazyka Python s praktickými cvičeniami a projektmi.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/datacamp/introduction_to_python.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Datacamp/introduction_to_python.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -567,7 +609,7 @@
             </div>
             <p data-i18n="certDataCampDescJavaIntro">Komplexný kurz zameraný na základy programovacieho jazyka Java s praktickými cvičeniami a projektmi.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/datacamp/introduction_to_java.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Datacamp/introduction_to_java.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -578,7 +620,7 @@
             </div>
             <p data-i18n="certDataCampDescJavaInter">Pokročilý kurz programovacieho jazyka Java zameraný na stredne pokročilé témy s praktickými cvičeniami a projektmi.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/datacamp/Intermediate_java.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Datacamp/Intermediate_java.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -589,7 +631,7 @@
             </div>
             <p data-i18n="certCodexJavaDesc">Objem kurzov od Codédex zameraný na učenie sa Java programovania. Poznámka: Cez GitHub Student Developer Pack som nemohol získať certifikát, pretože na ukončenie projektov a vydanie certifikátu je potrebný ich platený účet. Na obrázku je screenshot z vyplnených частí kurzu.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/Codédex/java.png" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Cod%C3%A9dex/java.png" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -600,7 +642,7 @@
             </div>
             <p data-i18n="certMatlabControlDesc">MathWorks certifikát - úvodný kurz zameraný na základy návrhov riadiacich systémov v MATLAB prostredí.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/Matlab/control_design_onramp.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Matlab/control_design_onramp.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -611,7 +653,7 @@
             </div>
             <p data-i18n="certCiscoIoTDesc">Cisco certifikát - kurz zameraný na úvod do IoT technológií, sieťových protokolov a praktických aplikácií.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/Cisco/Introduction_to_IoT_certificate_martinsulak18-gmail-com_c30c6c39-59c4-4421-bae1-5b8a89fc1170.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Cisco/Introduction_to_IoT_certificate_martinsulak18-gmail-com_c30c6c39-59c4-4421-bae1-5b8a89fc1170.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -622,7 +664,7 @@
             </div>
             <p data-i18n="certMatlabSymbolicDesc">MathWorks certifikát - kurz zameraný na symbolickú matematiku a algebraické operácie v MATLAB.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/Matlab/introduction_to_symbolic_math.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Matlab/introduction_to_symbolic_math.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -633,7 +675,7 @@
             </div>
             <p data-i18n="certMatlabOnrampDesc">MathWorks certifikát - úvodný kurz do MATLAB s praktickými cvičeniami a základnými konceptami.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/Matlab/matlab_onramp.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Matlab/matlab_onramp.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -644,7 +686,7 @@
             </div>
             <p data-i18n="certMatlabSimulinkDesc">MathWorks certifikát - úvodný kurz do Simulink simulačného prostredia a modelovania systémov.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/Matlab/simulink_onramp.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Matlab/simulink_onramp.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -655,7 +697,7 @@
             </div>
             <p data-i18n="certElementsOfAiDesc">Bezplatný kurz zameraný na základy umelej inteligencie a strojového učenia s praktickými príkladmi.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/Others/elements_of_ai.png" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Others/elements_of_ai.png" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
 
@@ -666,7 +708,7 @@
             </div>
             <p data-i18n="certIoTDigitalDesc">Kurz zameraný na úvod do IoT technológií a digitálnej transformácie s praktickými aplikáciami.</p>
             <div class="project-links">
-              <a class="link" href="https://github.com/martin18f/martinsulakdev/blob/main/certificates/Others/introduction_to_iot_and_digital_transformation.pdf" target="_blank" rel="noreferrer" data-i18n="viewCert">Zobraziť certifikát</a>
+              <a class="link" href="Certificates/Others/introduction_to_iot_and_digital_transformation.pdf" target="_blank" rel="noopener" data-i18n="viewCert">Zobraziť certifikát</a>
             </div>
           </div>
         </div>
@@ -678,7 +720,7 @@
     <section class="section" id="kontakt">
       <div class="wrap">
         <div class="section-head reveal">
-          <h2 data-i18n="contactTitle">Kontakt</h2>
+          <h2 data-i18n="contactTitle">Kontakt na spoluprácu</h2>
           <p class="muted" data-i18n="contactIntro">V prípade spolupráce, stáže alebo technického projektu ma môžeš kontaktovať cez email alebo GitHub.</p>
         </div>
 
@@ -688,11 +730,11 @@
             <div class="contact">
               <div class="c-row">
                 <span class="c-key">Email</span>
-                <a class="c-val" href="mailto:martinsulak18@gmail.com">martinsulak18@gmail.com</a>
+                <a class="c-val" href="#contactForm" id="emailLink" data-mail="bWFydGluc3VsYWsxOEBnbWFpbC5jb20=" data-i18n="emailLink">Odoslať email</a>
               </div>
               <div class="c-row">
                 <span class="c-key">GitHub</span>
-                <a class="c-val" href="https://github.com/martin18f" target="_blank" rel="noreferrer">martin18f</a>
+                <a class="c-val" href="https://github.com/martin18f" target="_blank" rel="me noopener noreferrer">martin18f</a>
               </div>
               <div class="c-row">
                 <span class="c-key">Portfolio</span>
@@ -700,7 +742,7 @@
               </div>
               <div class="c-row">
                 <span class="c-key">LinkedIn</span>
-               <a class="link" href="https://www.linkedin.com/in/martin-šulak-bb9529231" target="_blank" rel="noreferrer">
+               <a class="link" href="www.linkedin.com/in/martin-šulák-77147a417" target="_blank" rel="me noopener noreferrer">
   LinkedIn
 </a>
 
@@ -724,7 +766,7 @@
 
               <label class="lbl">
                 <span>Email</span>
-                <input class="input" name="reply_to" type="email" placeholder="tvoj@email.sk" required data-i18n-attr="placeholder:formEmailPh" />
+                <input class="input" name="reply_to" type="email" placeholder="Email pre odpoveď" required data-i18n-attr="placeholder:formEmailPh" />
               </label>
 
               <label class="lbl">

@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
   const sendBtn = document.getElementById("sendBtn");
+  const emailLink = document.getElementById("emailLink");
   const root = document.documentElement;
 
   const setupInteractiveBackground = () => {
@@ -120,9 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const translations = {
     sk: {
-      metaTitle: "Martin Šulák | AI študent a software developer",
+      metaTitle: "Martin Šulák | AI študent, web a software developer",
       metaDescription:
-        "Osobné portfólio Martina Šuláka, študenta umelej inteligencie a software developera so zameraním na web, AI/ML, riadiace systémy, IoT a komerčný projekt Desktop Web Widget.",
+        "Portfólio Martina Šuláka: AI študent a software developer pre webové aplikácie, AI/ML projekty, IoT, riadiace systémy a technické projekty.",
+      canonicalUrl: "https://martinsulak.dev/",
+      ogLocale: "sk_SK",
 
       skip: "Preskočiť na obsah",
 
@@ -148,7 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
       printBtn: "Tlačiť / PDF",
 
       heroPill: "Umelá inteligencia • Vývoj softvéru • Engineering",
-      heroSubtitle: "Študent umelej inteligencie • FEI TUKE",
+      heroSubtitle: "AI študent a software developer • FEI TUKE",
       heroLead:
         "Zameriavam sa na praktické technické projekty z oblastí softvérového vývoja, umelej inteligencie, strojového učenia, riadiacich systémov a moderných webových technológií. Prepájam akademické znalosti s praktickou implementáciou v osobných aj školských projektoch.",
 
@@ -168,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
       focus2: "AI/ML experimenty, dáta a technická dokumentácia",
       focus3: "Riadiace systémy, simulácie a engineering projekty",
 
-      profileTitle: "Profil",
+      profileTitle: "Profil AI študenta",
       profileText:
         "Študujem umelú inteligenciu na Fakulte elektrotechniky a informatiky Technickej univerzity v Košiciach. Venujem sa web developmentu, AI/ML projektom, riadiacim systémom a IoT. Mojím cieľom je budovať technické projekty, ktoré majú praktický význam a zároveň rozvíjajú moje softvérové aj inžinierske schopnosti.",
 
@@ -181,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
       areasNote:
         "Profil je priebežne rozširovaný podľa nových projektov, školských zadaní a technológií.",
 
-      skillsTitle: "Zručnosti",
+      skillsTitle: "Technické zručnosti",
       skillsHint: "Vyhľadávanie zvýrazní relevantné technológie a tagy.",
       skillPlaceholder: "Hľadať napr. JavaScript, Git, ML...",
 
@@ -193,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
       engineeringText:
         "Riadiace systémy, simulácie, IoT riešenia, verzovanie a technická dokumentácia.",
 
-      projectsTitle: "Projekty",
+      projectsTitle: "Web, AI/ML a engineering projekty",
       projectsIntro:
         "Vybrané projekty a repozitáre. Niektoré sú priamo v tomto portfóliu, iné majú vlastný repozitár alebo verejný live link.",
 
@@ -255,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
       availablePortfolio2: "Dostupné v portfóliovom repozitári",
       availableRepo: "Dostupné v priečinkoch repozitára",
 
-      certsTitle: "Certifikáty",
+      certsTitle: "Certifikáty a kurzy",
       certsText: "Certifikáty a absolvované kurzy sú dostupné v repozitári. Sekcia sa bude postupne rozširovať spolu s novými kurzami a technickými materiálmi.",
       certDataCampTitlePython: "Introduction to Python",
       certDataCampDescPython: "Komplexný kurz zameraný na základy programovacieho jazyka Python s praktickými cvičeniami a projektmi.",
@@ -290,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       viewCert: "Zobraziť certifikát",
 
-      educationTitle: "Vzdelanie",
+      educationTitle: "Vzdelanie v umelej inteligencii",
 
     universityWhen: "2024 – súčasnosť\n2. ročník",
     universitySchool:
@@ -311,17 +314,18 @@ document.addEventListener("DOMContentLoaded", () => {
     secondary2:
       "Základ pre ďalšie štúdium technických, softvérových a inžinierskych oblastí",
 
-      contactTitle: "Kontakt",
+      contactTitle: "Kontakt na spoluprácu",
       contactIntro:
         "V prípade spolupráce, stáže alebo technického projektu ma môžeš kontaktovať cez email alebo GitHub.",
 
       linksTitle: "Odkazy",
+      emailLink: "Odoslať email",
       linkedinContact: "bude doplnený",
 
       formTitle: "Kontaktný formulár",
       formName: "Meno",
       formNamePh: "Tvoje meno",
-      formEmailPh: "tvoj@email.sk",
+      formEmailPh: "Email pre odpoveď",
       formSubject: "Predmet",
       formSubjectPh: "Krátky predmet",
       formMessage: "Správa",
@@ -339,9 +343,11 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     en: {
-      metaTitle: "Martin Šulák | AI Student And Software Developer",
+      metaTitle: "Martin Šulák | AI Student, Web and Software Developer",
       metaDescription:
-        "Personal portfolio of Martin Šulák, an Artificial Intelligence student and software developer building web, AI/ML, control systems, IoT, and commercial projects including Desktop Web Widget.",
+        "Martin Šulák portfolio: Artificial Intelligence student and software developer focused on web apps, AI/ML projects, IoT, control systems and certificates.",
+      canonicalUrl: "https://martinsulak.dev/?lang=en",
+      ogLocale: "en_US",
 
       skip: "Skip to content",
 
@@ -367,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
       printBtn: "Print / PDF",
 
       heroPill: "Artificial Intelligence • Software Development • Engineering",
-      heroSubtitle: "Artificial Intelligence Student • FEI TUKE",
+      heroSubtitle: "AI Student and Software Developer • FEI TUKE",
       heroLead:
         "I focus on practical technical projects across software development, artificial intelligence, machine learning, control systems, and modern web technologies. I combine academic knowledge with hands-on implementation through personal and academic projects.",
 
@@ -387,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
       focus2: "AI/ML experiments, data and technical documentation",
       focus3: "Control systems, simulations and engineering projects",
 
-      profileTitle: "Profile",
+      profileTitle: "AI Student Profile",
       profileText:
         "I study Artificial Intelligence at the Faculty of Electrical Engineering and Informatics, Technical University of Košice. I focus on web development, AI/ML projects, control systems and IoT. My goal is to build technical projects with practical value while developing my software and engineering skills.",
 
@@ -400,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
       areasNote:
         "This profile is continuously expanded through new projects, academic assignments and technologies.",
 
-      skillsTitle: "Skills",
+      skillsTitle: "Technical Skills",
       skillsHint: "Search highlights relevant technologies and tags.",
       skillPlaceholder: "Search e.g. JavaScript, Git, ML...",
 
@@ -412,7 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
       engineeringText:
         "Control systems, simulations, IoT solutions, version control and technical documentation.",
 
-      projectsTitle: "Projects",
+      projectsTitle: "Web, AI/ML and Engineering Projects",
       projectsIntro:
         "Selected projects and repositories. Some are available directly in this portfolio, while others have their own repository or public live link.",
 
@@ -474,7 +480,7 @@ document.addEventListener("DOMContentLoaded", () => {
       availablePortfolio2: "Available in the portfolio repository",
       availableRepo: "Available in repository folders",
 
-      educationTitle: "Education",
+      educationTitle: "Artificial Intelligence Education",
 
 universityWhen: "2024 – present\n2nd year",
 universitySchool:
@@ -495,14 +501,15 @@ secondary1:
 secondary2:
   "Foundation for further study in technical, software and engineering-oriented fields",
 
-      contactTitle: "Contact",
+      contactTitle: "Contact for Collaboration",
       contactIntro:
         "For collaboration, internships or technical projects, you can contact me by email or through GitHub.",
 
       linksTitle: "Links",
+      emailLink: "Send email",
       linkedinContact: "to be added",
 
-      certsTitle: "Certifications",
+      certsTitle: "Certifications and Courses",
       certsText: "Certifications and completed courses are available in the repository. This section will gradually expand with new courses and learning materials.",
       certDataCampTitlePython: "Introduction to Python",
       certDataCampDescPython: "Comprehensive course focused on Python programming fundamentals with practical exercises and projects.",
@@ -540,7 +547,7 @@ secondary2:
       formTitle: "Contact Form",
       formName: "Name",
       formNamePh: "Your name",
-      formEmailPh: "your@email.com",
+      formEmailPh: "Reply email",
       formSubject: "Subject",
       formSubjectPh: "Short subject",
       formMessage: "Message",
@@ -613,14 +620,69 @@ secondary2:
     },
   };
 
+  const isSupportedLanguage = (lang) => {
+    return Object.prototype.hasOwnProperty.call(translations, lang);
+  };
+
+  const getUrlLanguage = () => {
+    const params = new URLSearchParams(window.location.search);
+    const queryLang = params.get("lang");
+
+    if (isSupportedLanguage(queryLang)) {
+      return queryLang;
+    }
+
+    return "";
+  };
+
   const getCurrentLanguage = () => {
-    return localStorage.getItem("portfolio.lang") || "sk";
+    const urlLanguage = getUrlLanguage();
+
+    if (urlLanguage) {
+      return urlLanguage;
+    }
+
+    const savedLanguage = localStorage.getItem("portfolio.lang");
+
+    if (isSupportedLanguage(savedLanguage)) {
+      return savedLanguage;
+    }
+
+    return isSupportedLanguage(document.documentElement.lang)
+      ? document.documentElement.lang
+      : "sk";
   };
 
   const setMetaContent = (selector, content) => {
     const element = document.querySelector(selector);
     if (element && content) {
       element.setAttribute("content", content);
+    }
+  };
+
+  const setLinkHref = (selector, href) => {
+    const element = document.querySelector(selector);
+    if (element && href) {
+      element.setAttribute("href", href);
+    }
+  };
+
+  const syncLanguageUrl = (lang) => {
+    if (!window.history || !window.history.pushState) return;
+
+    const target = new URL(window.location.href);
+
+    if (lang === "en") {
+      target.searchParams.set("lang", "en");
+    } else {
+      target.searchParams.delete("lang");
+    }
+
+    const nextUrl = `${target.pathname}${target.search}${target.hash}`;
+    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+    if (nextUrl !== currentUrl) {
+      window.history.pushState({ lang }, "", nextUrl);
     }
   };
 
@@ -695,27 +757,37 @@ secondary2:
     });
   };
 
-  const applyLanguage = (lang) => {
-    const dict = translations[lang] || translations.sk;
+  const applyLanguage = (lang, options = {}) => {
+    const activeLang = isSupportedLanguage(lang) ? lang : "sk";
+    const dict = translations[activeLang] || translations.sk;
 
-    document.documentElement.lang = lang;
+    document.documentElement.lang = activeLang;
     document.title = dict.metaTitle;
     setMetaContent('meta[name="description"]', dict.metaDescription);
+    setMetaContent('meta[property="og:title"]', dict.metaTitle);
+    setMetaContent('meta[property="og:url"]', dict.canonicalUrl);
+    setMetaContent('meta[property="og:locale"]', dict.ogLocale);
     setMetaContent('meta[property="og:description"]', dict.metaDescription);
+    setMetaContent('meta[name="twitter:title"]', dict.metaTitle);
     setMetaContent('meta[name="twitter:description"]', dict.metaDescription);
+    setLinkHref('link[rel="canonical"]', dict.canonicalUrl);
 
-    applyTextTranslations(lang);
-    applyAttributeTranslations(lang);
-    applyLegacyPlaceholderTranslations(lang);
-    applyStaticTextTranslations(lang);
+    applyTextTranslations(activeLang);
+    applyAttributeTranslations(activeLang);
+    applyLegacyPlaceholderTranslations(activeLang);
+    applyStaticTextTranslations(activeLang);
     applyLineBreaks();
 
     if (langBtn) {
-      langBtn.textContent = lang === "sk" ? "EN" : "SK";
+      langBtn.textContent = activeLang === "sk" ? "EN" : "SK";
       langBtn.setAttribute("aria-label", dict.langBtnAria);
     }
 
-    localStorage.setItem("portfolio.lang", lang);
+    if (options.updateUrl) {
+      syncLanguageUrl(activeLang);
+    }
+
+    localStorage.setItem("portfolio.lang", activeLang);
   };
 
   const savedLanguage = getCurrentLanguage();
@@ -723,11 +795,15 @@ secondary2:
 
   if (langBtn) {
     langBtn.addEventListener("click", () => {
-      const currentLanguage = getCurrentLanguage();
+      const currentLanguage = document.documentElement.lang || getCurrentLanguage();
       const nextLanguage = currentLanguage === "sk" ? "en" : "sk";
-      applyLanguage(nextLanguage);
+      applyLanguage(nextLanguage, { updateUrl: true });
     });
   }
+
+  window.addEventListener("popstate", () => {
+    applyLanguage(getCurrentLanguage());
+  });
 
   const savedTheme = localStorage.getItem("portfolio.theme") || "dark";
   document.documentElement.setAttribute("data-theme", savedTheme);
@@ -832,6 +908,21 @@ secondary2:
           tag.classList.add("dim");
         }
       });
+    });
+  }
+
+  if (emailLink) {
+    emailLink.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const encodedEmail = emailLink.getAttribute("data-mail");
+
+      if (!encodedEmail) {
+        contactForm?.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+
+      window.location.href = `mailto:${window.atob(encodedEmail)}`;
     });
   }
 

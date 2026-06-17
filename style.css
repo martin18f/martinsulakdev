@@ -1505,6 +1505,7 @@ textarea.input {
 .stack-icon {
   position: relative;
   min-width: 0;
+  --tech-rgb: 100, 255, 212;
   height: 86px;
   display: flex;
   align-items: center;
@@ -1598,6 +1599,54 @@ textarea.input {
     0 18px 46px rgba(0,0,0,0.34),
     inset 0 1px 0 rgba(255,255,255,0.12);
   z-index: 2;
+}
+
+.tech-html {
+  --tech-rgb: 227, 79, 38;
+}
+
+.tech-css {
+  --tech-rgb: 21, 114, 182;
+}
+
+.tech-js {
+  --tech-rgb: 247, 223, 30;
+}
+
+.tech-react {
+  --tech-rgb: 97, 218, 251;
+}
+
+.tech-python {
+  --tech-rgb: 53, 114, 165;
+}
+
+.tech-java {
+  --tech-rgb: 237, 139, 0;
+}
+
+.tech-c {
+  --tech-rgb: 92, 107, 192;
+}
+
+.tech-mysql {
+  --tech-rgb: 0, 117, 143;
+}
+
+.tech-matlab {
+  --tech-rgb: 237, 120, 36;
+}
+
+.tech-vscode {
+  --tech-rgb: 0, 122, 204;
+}
+
+.tech-git {
+  --tech-rgb: 240, 80, 51;
+}
+
+.tech-github {
+  --tech-rgb: 181, 191, 204;
 }
 
 .stack-icon:hover::before {

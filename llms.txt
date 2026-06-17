@@ -1,0 +1,38 @@
+# Martin Sulak Portfolio
+
+> Official portfolio of Martin Šulák, an Artificial Intelligence student and software developer focused on web development, AI/ML projects, control systems, IoT, and engineering work.
+
+Canonical URL: https://martinsulak.dev/
+English URL: https://martinsulak.dev/?lang=en
+Primary language: Slovak
+Secondary language: English
+Author: Martin Šulák
+GitHub: https://github.com/martin18f
+LinkedIn: https://www.linkedin.com/in/martin-šulak-bb9529231
+
+## Site Summary
+
+This site is a personal technical portfolio. It presents Martin Šulák's profile, skills, education, certificates, contact form, and selected projects across web development, artificial intelligence, machine learning, control systems, IoT, MATLAB/Simulink, Python, JavaScript, React, Java, C, MySQL, Git, and GitHub.
+
+## Important Sections
+
+- Profile: https://martinsulak.dev/#profil
+- Technical skills: https://martinsulak.dev/#skills
+- Web, AI/ML and engineering projects: https://martinsulak.dev/#projekty
+- Artificial Intelligence education: https://martinsulak.dev/#vzdelanie
+- Certifications and courses: https://martinsulak.dev/#certifikaty
+- Contact form: https://martinsulak.dev/#kontakt
+
+## Highlighted Projects
+
+- PP AUTO: dealership website for vehicle presentation and customer contact.
+- Autoškola Roka: driving school website for services, courses, and public contact information.
+- Fuely: React web application for fuel cost calculation.
+- Desktop Web Widget: Windows application for pinning interactive web content to the desktop.
+- Speech Stress Detection: academic neural-network project for speech-based stress detection.
+- UAV Control System: MATLAB/Simulink control systems project with fuzzy logic control.
+- Machine Learning Project: academic ML implementation and evaluation work.
+
+## Preferred Description
+
+Martin Šulák is an AI student and software developer building web applications, AI/ML experiments, IoT and control-system projects, and technical documentation.
