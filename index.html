@@ -1,8 +1,6 @@
 <!doctype html>
 <html lang="sk" data-theme="dark">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8147584564803084"
-     crossorigin="anonymous"></script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Martin Šulák | AI študent, web a software developer</title>
@@ -786,11 +784,59 @@
         </div>
 
         <footer class="footer">
+          <div class="footer-links" aria-label="Právne odkazy" data-i18n-attr="aria-label:legalLinksAria">
+            <a href="privacy.html" data-i18n="privacyLink">Ochrana osobných údajov</a>
+            <a href="cookies.html" data-i18n="cookiesLink">Cookies</a>
+            <button type="button" id="cookieSettingsBtn" data-i18n="cookieSettings">Nastavenia cookies</button>
+          </div>
           <span class="muted tiny">© <span id="year"></span> Martin Šulák • <span data-i18n="footerText">Personal Portfolio • Artificial Intelligence & Software Development</span> • v<span id="version"></span></span>
         </footer>
       </div>
     </section>
   </main>
-  <script src="app.js?v=20260602-1" defer></script>
+
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-modal="false" aria-labelledby="cookieBannerTitle" hidden>
+    <div class="cookie-copy">
+      <h2 id="cookieBannerTitle" data-i18n="cookieBannerTitle">Nastavenia súkromia</h2>
+      <p data-i18n="cookieBannerText">
+        Používam nevyhnutné cookies pre zapamätanie nastavení stránky. Analytické a marketingové cookies spustím iba po tvojom súhlase.
+      </p>
+    </div>
+
+    <div class="cookie-options" id="cookieOptions" hidden>
+      <label class="cookie-option locked">
+        <input type="checkbox" checked disabled>
+        <span>
+          <strong data-i18n="cookieNecessary">Nevyhnutné</strong>
+          <small data-i18n="cookieNecessaryText">Potrebné pre uloženie nastavení jazyka, témy a súhlasu.</small>
+        </span>
+      </label>
+
+      <label class="cookie-option">
+        <input type="checkbox" id="cookieAnalytics">
+        <span>
+          <strong data-i18n="cookieAnalytics">Analytika</strong>
+          <small data-i18n="cookieAnalyticsText">Pomáha pochopiť návštevnosť stránky cez Google Analytics.</small>
+        </span>
+      </label>
+
+      <label class="cookie-option">
+        <input type="checkbox" id="cookieMarketing">
+        <span>
+          <strong data-i18n="cookieMarketing">Marketing</strong>
+          <small data-i18n="cookieMarketingText">Umožní načítanie Google AdSense a súvisiacich reklamných cookies.</small>
+        </span>
+      </label>
+    </div>
+
+    <div class="cookie-actions">
+      <button class="btn ghost" id="cookieCustomizeBtn" type="button" aria-expanded="false" aria-controls="cookieOptions" data-i18n="cookieCustomize">Prispôsobiť</button>
+      <button class="btn ghost" id="cookieRejectBtn" type="button" data-i18n="cookieReject">Odmietnuť</button>
+      <button class="btn ghost" id="cookieSaveBtn" type="button" data-i18n="cookieSave" hidden>Uložiť výber</button>
+      <button class="btn" id="cookieAcceptBtn" type="button" data-i18n="cookieAccept">Prijať všetko</button>
+    </div>
+  </div>
+
+  <script src="app.js?v=20260618-1" defer></script>
 </body>
 </html>

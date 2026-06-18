@@ -1,21 +1,55 @@
-const APP_VERSION = "1.0";
+const APP_VERSION = "1.1";
 const ANALYTICS_ID = "G-Z09CQZZVHQ";
+const ADS_CLIENT_ID = "ca-pub-8147584564803084";
+const CONSENT_COOKIE_NAME = "portfolio_cookie_consent";
+const CONSENT_MAX_AGE = 60 * 60 * 24 * 180;
+const CONSENT_VERSION = 1;
+const CV_FILES = {
+  sk: "CV/CV%20-%20Martin%20%C5%A0ul%C3%A1k.pdf",
+  en: "CV/CV%20-%20Martin%20%C5%A0ul%C3%A1k%20(EN).pdf",
+};
 
 const loadAnalytics = () => {
   if (window.__portfolioAnalyticsLoaded) return;
 
   window.__portfolioAnalyticsLoaded = true;
+  window[`ga-disable-${ANALYTICS_ID}`] = false;
   window.dataLayer = window.dataLayer || [];
   window.gtag = function gtag() {
     window.dataLayer.push(arguments);
   };
 
+  const consent = window.__portfolioConsentPreferences || {};
+  const analyticsConsent = consent.analytics ? "granted" : "denied";
+  const marketingConsent = consent.marketing ? "granted" : "denied";
+
+  window.gtag("consent", "default", {
+    analytics_storage: analyticsConsent,
+    ad_storage: marketingConsent,
+    ad_user_data: marketingConsent,
+    ad_personalization: marketingConsent,
+  });
   window.gtag("js", new Date());
   window.gtag("config", ANALYTICS_ID);
 
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_ID}`;
+  script.dataset.cookieCategory = "analytics";
+  document.head.append(script);
+};
+
+const loadAds = () => {
+  if (window.__portfolioAdsLoaded) return;
+
+  window.__portfolioAdsLoaded = true;
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.crossOrigin = "anonymous";
+  script.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADS_CLIENT_ID}`;
+  script.dataset.adClient = ADS_CLIENT_ID;
+  script.dataset.cookieCategory = "marketing";
   document.head.append(script);
 };
 
@@ -33,6 +67,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const formStatus = document.getElementById("formStatus");
   const sendBtn = document.getElementById("sendBtn");
   const emailLink = document.getElementById("emailLink");
+  const cookieBanner = document.getElementById("cookieBanner");
+  const cookieOptions = document.getElementById("cookieOptions");
+  const cookieCustomizeBtn = document.getElementById("cookieCustomizeBtn");
+  const cookieRejectBtn = document.getElementById("cookieRejectBtn");
+  const cookieSaveBtn = document.getElementById("cookieSaveBtn");
+  const cookieAcceptBtn = document.getElementById("cookieAcceptBtn");
+  const cookieAnalytics = document.getElementById("cookieAnalytics");
+  const cookieMarketing = document.getElementById("cookieMarketing");
+  const cookieSettingsBtn = document.getElementById("cookieSettingsBtn");
   const root = document.documentElement;
 
   const setupInteractiveBackground = () => {
@@ -116,7 +159,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  scheduleAnalytics();
+  const scheduleAds = () => {
+    const run = () => {
+      const delayedLoad = () => window.setTimeout(loadAds, 1800);
+
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(delayedLoad, { timeout: 4000 });
+      } else {
+        delayedLoad();
+      }
+    };
+
+    if (document.readyState === "complete") {
+      run();
+    } else {
+      window.addEventListener("load", run, { once: true });
+    }
+  };
 
 
   const translations = {
@@ -137,6 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stackIntro: "Technológie, ktoré používam pri webových, AI/ML a engineering projektoch.",
       langBtnAria: "Prepnúť do angličtiny",
       themeAria: "Prepnúť tému",
+      legalLinksAria: "Právne odkazy",
 
       brandRole: "AI študent • Developer • Engineering",
 
@@ -148,7 +208,9 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Kontakt",
 
       themeBtn: "Téma",
-      printBtn: "Tlačiť / PDF",
+      printBtn: "Tlačiť CV / PDF",
+      printCvTitle: "Životopis Martin Šulák",
+      printCvFallback: "Otvoriť životopis",
 
       heroPill: "Umelá inteligencia • Vývoj softvéru • Engineering",
       heroSubtitle: "AI študent a software developer • FEI TUKE",
@@ -338,6 +400,26 @@ document.addEventListener("DOMContentLoaded", () => {
       formError:
         "Správu sa nepodarilo odoslať. Skús to znova alebo ma kontaktuj priamo cez email.",
 
+      privacyLink: "Ochrana osobných údajov",
+      cookiesLink: "Cookies",
+      cookieSettings: "Nastavenia cookies",
+      cookieBannerTitle: "Nastavenia súkromia",
+      cookieBannerText:
+        "Používam nevyhnutné cookies pre zapamätanie nastavení stránky. Analytické a marketingové cookies spustím iba po tvojom súhlase.",
+      cookieNecessary: "Nevyhnutné",
+      cookieNecessaryText:
+        "Potrebné pre uloženie nastavení jazyka, témy a súhlasu.",
+      cookieAnalytics: "Analytika",
+      cookieAnalyticsText:
+        "Pomáha pochopiť návštevnosť stránky cez Google Analytics.",
+      cookieMarketing: "Marketing",
+      cookieMarketingText:
+        "Umožní načítanie Google AdSense a súvisiacich reklamných cookies.",
+      cookieCustomize: "Prispôsobiť",
+      cookieReject: "Odmietnuť",
+      cookieSave: "Uložiť výber",
+      cookieAccept: "Prijať všetko",
+
       footerText:
         "Osobné portfólio • Umelá inteligencia & vývoj softvéru",
     },
@@ -359,6 +441,7 @@ document.addEventListener("DOMContentLoaded", () => {
       stackIntro: "Tools I use across web, AI/ML, and engineering projects.",
       langBtnAria: "Switch to Slovak",
       themeAria: "Switch theme",
+      legalLinksAria: "Legal links",
 
       brandRole: "AI Student • Developer • Engineering",
 
@@ -370,7 +453,9 @@ document.addEventListener("DOMContentLoaded", () => {
       navContact: "Contact",
 
       themeBtn: "Theme",
-      printBtn: "Print / PDF",
+      printBtn: "Print CV / PDF",
+      printCvTitle: "Martin Šulák CV",
+      printCvFallback: "Open CV",
 
       heroPill: "Artificial Intelligence • Software Development • Engineering",
       heroSubtitle: "AI Student and Software Developer • FEI TUKE",
@@ -560,6 +645,26 @@ secondary2:
       formError:
         "The message could not be sent. Try again or contact me directly by email.",
 
+      privacyLink: "Privacy Policy",
+      cookiesLink: "Cookies",
+      cookieSettings: "Cookie settings",
+      cookieBannerTitle: "Privacy settings",
+      cookieBannerText:
+        "I use necessary cookies to remember site preferences. Analytics and marketing cookies are loaded only after your consent.",
+      cookieNecessary: "Necessary",
+      cookieNecessaryText:
+        "Required to store language, theme and consent preferences.",
+      cookieAnalytics: "Analytics",
+      cookieAnalyticsText:
+        "Helps understand site traffic through Google Analytics.",
+      cookieMarketing: "Marketing",
+      cookieMarketingText:
+        "Allows Google AdSense and related advertising cookies to load.",
+      cookieCustomize: "Customize",
+      cookieReject: "Reject",
+      cookieSave: "Save choices",
+      cookieAccept: "Accept all",
+
       footerText:
         "Personal Portfolio • Artificial Intelligence & Software Development",
     },
@@ -624,6 +729,22 @@ secondary2:
     return Object.prototype.hasOwnProperty.call(translations, lang);
   };
 
+  const getStoredValue = (key) => {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (error) {
+      return "";
+    }
+  };
+
+  const setStoredValue = (key, value) => {
+    try {
+      window.localStorage.setItem(key, value);
+    } catch (error) {
+      // Storage can be unavailable in strict privacy modes.
+    }
+  };
+
   const getUrlLanguage = () => {
     const params = new URLSearchParams(window.location.search);
     const queryLang = params.get("lang");
@@ -635,6 +756,50 @@ secondary2:
     return "";
   };
 
+  const getBrowserLanguage = () => {
+    const languages = Array.isArray(navigator.languages) && navigator.languages.length
+      ? navigator.languages
+      : [navigator.language || navigator.userLanguage || ""];
+
+    for (const language of languages) {
+      const code = String(language).toLowerCase().split("-")[0];
+
+      if (code === "sk" || code === "cs") {
+        return "sk";
+      }
+
+      if (code === "en") {
+        return "en";
+      }
+    }
+
+    return "";
+  };
+
+  const getLocationLanguage = () => {
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+
+    if (["Europe/Bratislava", "Europe/Prague"].includes(timeZone)) {
+      return "sk";
+    }
+
+    if (
+      timeZone.startsWith("America/") ||
+      timeZone.startsWith("Australia/") ||
+      timeZone === "Europe/London" ||
+      timeZone === "Europe/Dublin" ||
+      timeZone === "Pacific/Auckland"
+    ) {
+      return "en";
+    }
+
+    return "";
+  };
+
+  const getPreferredLanguage = () => {
+    return getBrowserLanguage() || getLocationLanguage() || "";
+  };
+
   const getCurrentLanguage = () => {
     const urlLanguage = getUrlLanguage();
 
@@ -642,10 +807,16 @@ secondary2:
       return urlLanguage;
     }
 
-    const savedLanguage = localStorage.getItem("portfolio.lang");
+    const savedLanguage = getStoredValue("portfolio.lang");
 
     if (isSupportedLanguage(savedLanguage)) {
       return savedLanguage;
+    }
+
+    const preferredLanguage = getPreferredLanguage();
+
+    if (isSupportedLanguage(preferredLanguage)) {
+      return preferredLanguage;
     }
 
     return isSupportedLanguage(document.documentElement.lang)
@@ -757,6 +928,231 @@ secondary2:
     });
   };
 
+  const getCookieValue = (name) => {
+    const cookies = document.cookie ? document.cookie.split("; ") : [];
+    const cookie = cookies.find((item) => item.startsWith(`${name}=`));
+
+    if (!cookie) return "";
+
+    return cookie.slice(name.length + 1);
+  };
+
+  const setConsentCookie = (preferences) => {
+    const secure = window.location.protocol === "https:" ? "; Secure" : "";
+    const value = encodeURIComponent(JSON.stringify({
+      version: CONSENT_VERSION,
+      necessary: true,
+      analytics: Boolean(preferences.analytics),
+      marketing: Boolean(preferences.marketing),
+      updatedAt: new Date().toISOString(),
+    }));
+
+    document.cookie = `${CONSENT_COOKIE_NAME}=${value}; Max-Age=${CONSENT_MAX_AGE}; Path=/; SameSite=Lax${secure}`;
+  };
+
+  const getConsentCookie = () => {
+    const raw = getCookieValue(CONSENT_COOKIE_NAME);
+
+    if (!raw) return null;
+
+    try {
+      const parsed = JSON.parse(decodeURIComponent(raw));
+
+      if (parsed.version !== CONSENT_VERSION) {
+        return null;
+      }
+
+      return {
+        necessary: true,
+        analytics: Boolean(parsed.analytics),
+        marketing: Boolean(parsed.marketing),
+      };
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const getCookieDomains = () => {
+    const host = window.location.hostname;
+
+    if (!host || host === "localhost" || /^\d{1,3}(\.\d{1,3}){3}$/.test(host)) {
+      return [""];
+    }
+
+    const parts = host.split(".");
+    const domains = ["", host, `.${host}`];
+
+    if (parts.length > 2) {
+      domains.push(`.${parts.slice(-2).join(".")}`);
+    }
+
+    return Array.from(new Set(domains));
+  };
+
+  const deleteCookie = (name) => {
+    const secure = window.location.protocol === "https:" ? "; Secure" : "";
+
+    getCookieDomains().forEach((domain) => {
+      const domainPart = domain ? `; Domain=${domain}` : "";
+      document.cookie = `${name}=; Max-Age=0; Path=/${domainPart}; SameSite=Lax${secure}`;
+    });
+  };
+
+  const clearOptionalCookies = (category) => {
+    const analyticsCookies = [
+      "_ga",
+      `_ga_${ANALYTICS_ID.replace("G-", "")}`,
+      "_gid",
+      "_gat",
+      "_gat_gtag_UA",
+    ];
+    const marketingCookies = [
+      "__gads",
+      "__gpi",
+      "__eoi",
+      "IDE",
+      "NID",
+      "ANID",
+      "DSID",
+      "FLC",
+      "RUL",
+    ];
+    const names = category === "analytics" ? analyticsCookies : marketingCookies;
+
+    names.forEach(deleteCookie);
+  };
+
+  const applyCookiePreferences = (preferences) => {
+    const normalized = {
+      necessary: true,
+      analytics: Boolean(preferences?.analytics),
+      marketing: Boolean(preferences?.marketing),
+    };
+
+    window.__portfolioConsentPreferences = normalized;
+    window[`ga-disable-${ANALYTICS_ID}`] = !normalized.analytics;
+
+    if (window.gtag) {
+      window.gtag("consent", "update", {
+        analytics_storage: normalized.analytics ? "granted" : "denied",
+        ad_storage: normalized.marketing ? "granted" : "denied",
+        ad_user_data: normalized.marketing ? "granted" : "denied",
+        ad_personalization: normalized.marketing ? "granted" : "denied",
+      });
+    }
+
+    if (normalized.analytics) {
+      scheduleAnalytics();
+    } else {
+      clearOptionalCookies("analytics");
+    }
+
+    if (normalized.marketing) {
+      scheduleAds();
+    } else {
+      clearOptionalCookies("marketing");
+      document.querySelectorAll('[data-cookie-category="marketing"]').forEach((script) => script.remove());
+      window.__portfolioAdsLoaded = false;
+    }
+  };
+
+  const setCookieBannerVisible = (visible) => {
+    if (!cookieBanner) return;
+
+    cookieBanner.hidden = !visible;
+  };
+
+  const setCookiePanelVisible = (visible) => {
+    if (!cookieOptions || !cookieCustomizeBtn || !cookieSaveBtn) return;
+
+    cookieOptions.hidden = !visible;
+    cookieSaveBtn.hidden = !visible;
+    cookieCustomizeBtn.setAttribute("aria-expanded", String(visible));
+  };
+
+  const syncCookieInputs = (preferences) => {
+    if (cookieAnalytics) {
+      cookieAnalytics.checked = Boolean(preferences?.analytics);
+    }
+
+    if (cookieMarketing) {
+      cookieMarketing.checked = Boolean(preferences?.marketing);
+    }
+  };
+
+  const saveCookiePreferences = (preferences) => {
+    const normalized = {
+      necessary: true,
+      analytics: Boolean(preferences.analytics),
+      marketing: Boolean(preferences.marketing),
+    };
+
+    setConsentCookie(normalized);
+    applyCookiePreferences(normalized);
+    syncCookieInputs(normalized);
+    setCookieBannerVisible(false);
+  };
+
+  const openCookieSettings = () => {
+    const preferences = getConsentCookie() || {
+      necessary: true,
+      analytics: false,
+      marketing: false,
+    };
+
+    syncCookieInputs(preferences);
+    setCookiePanelVisible(true);
+    setCookieBannerVisible(true);
+  };
+
+  const setupCookieConsent = () => {
+    const preferences = getConsentCookie();
+
+    if (preferences) {
+      syncCookieInputs(preferences);
+      applyCookiePreferences(preferences);
+      setCookieBannerVisible(false);
+    } else {
+      const defaultPreferences = {
+        necessary: true,
+        analytics: false,
+        marketing: false,
+      };
+
+      syncCookieInputs(defaultPreferences);
+      applyCookiePreferences(defaultPreferences);
+      setCookiePanelVisible(false);
+      setCookieBannerVisible(true);
+    }
+
+    cookieCustomizeBtn?.addEventListener("click", () => {
+      setCookiePanelVisible(cookieOptions?.hidden);
+    });
+
+    cookieRejectBtn?.addEventListener("click", () => {
+      saveCookiePreferences({
+        analytics: false,
+        marketing: false,
+      });
+    });
+
+    cookieAcceptBtn?.addEventListener("click", () => {
+      saveCookiePreferences({
+        analytics: true,
+        marketing: true,
+      });
+    });
+
+    cookieSaveBtn?.addEventListener("click", () => {
+      saveCookiePreferences({
+        analytics: Boolean(cookieAnalytics?.checked),
+        marketing: Boolean(cookieMarketing?.checked),
+      });
+    });
+
+    cookieSettingsBtn?.addEventListener("click", openCookieSettings);
+  };
+
   const applyLanguage = (lang, options = {}) => {
     const activeLang = isSupportedLanguage(lang) ? lang : "sk";
     const dict = translations[activeLang] || translations.sk;
@@ -787,11 +1183,12 @@ secondary2:
       syncLanguageUrl(activeLang);
     }
 
-    localStorage.setItem("portfolio.lang", activeLang);
+    setStoredValue("portfolio.lang", activeLang);
   };
 
   const savedLanguage = getCurrentLanguage();
   applyLanguage(savedLanguage);
+  setupCookieConsent();
 
   if (langBtn) {
     langBtn.addEventListener("click", () => {
@@ -805,7 +1202,7 @@ secondary2:
     applyLanguage(getCurrentLanguage());
   });
 
-  const savedTheme = localStorage.getItem("portfolio.theme") || "dark";
+  const savedTheme = getStoredValue("portfolio.theme") || "dark";
   document.documentElement.setAttribute("data-theme", savedTheme);
 
   if (themeBtn) {
@@ -815,7 +1212,7 @@ secondary2:
       const nextTheme = currentTheme === "dark" ? "light" : "dark";
 
       document.documentElement.setAttribute("data-theme", nextTheme);
-      localStorage.setItem("portfolio.theme", nextTheme);
+      setStoredValue("portfolio.theme", nextTheme);
     });
   }
 
@@ -874,10 +1271,69 @@ secondary2:
     });
   }
 
+  const getCvUrl = (lang) => {
+    const activeLang = isSupportedLanguage(lang) ? lang : "sk";
+    return new URL(CV_FILES[activeLang] || CV_FILES.sk, window.location.href).href;
+  };
+
+  const printCv = () => {
+    const activeLanguage = getCurrentLanguage();
+    const dict = translations[activeLanguage] || translations.sk;
+    const cvUrl = getCvUrl(activeLanguage);
+    const cvTitle = dict.printCvTitle || "Martin Sulak CV";
+    const printWindow = window.open("", "_blank");
+
+    if (!printWindow) {
+      window.open(cvUrl, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    const printDocument = printWindow.document;
+    printDocument.open();
+    printDocument.write("<!doctype html><html><head><title></title></head><body></body></html>");
+    printDocument.close();
+    printDocument.title = cvTitle;
+
+    const style = printDocument.createElement("style");
+    style.textContent = `
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: #111;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+    `;
+
+    const iframe = printDocument.createElement("iframe");
+    iframe.src = cvUrl;
+    iframe.title = cvTitle;
+
+    iframe.addEventListener("load", () => {
+      window.setTimeout(() => {
+        try {
+          iframe.contentWindow.focus();
+          iframe.contentWindow.print();
+        } catch (error) {
+          printWindow.focus();
+          printWindow.print();
+        }
+      }, 650);
+    }, { once: true });
+
+    printDocument.head.append(style);
+    printDocument.body.append(iframe);
+  };
+
   if (printBtn) {
-    printBtn.addEventListener("click", () => {
-      window.print();
-    });
+    printBtn.addEventListener("click", printCv);
   }
 
   if (year) {
