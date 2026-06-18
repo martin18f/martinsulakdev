@@ -1,4 +1,4 @@
-const APP_VERSION = "1.1";
+const APP_VERSION = "1.2";
 const ANALYTICS_ID = "G-Z09CQZZVHQ";
 const ADS_CLIENT_ID = "ca-pub-8147584564803084";
 const CONSENT_COOKIE_NAME = "portfolio_cookie_consent";
@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const formStatus = document.getElementById("formStatus");
   const sendBtn = document.getElementById("sendBtn");
   const emailLink = document.getElementById("emailLink");
+  const privacyConsent = document.getElementById("privacyConsent");
   const cookieBanner = document.getElementById("cookieBanner");
   const cookieOptions = document.getElementById("cookieOptions");
   const cookieCustomizeBtn = document.getElementById("cookieCustomizeBtn");
@@ -392,11 +393,17 @@ document.addEventListener("DOMContentLoaded", () => {
       formSubjectPh: "Krátky predmet",
       formMessage: "Správa",
       formMessagePh: "Napíš správu...",
+      formPrivacyConsentPrefix:
+        "Súhlasím so spracovaním osobných údajov podľa dokumentu",
+      formPrivacyConsentSuffix:
+        "a beriem na vedomie odoslanie údajov cez Formcarry.",
       sendBtn: "Odoslať",
 
       formSending: "Odosielam správu...",
       formSendingButton: "Odosielam...",
       formSuccess: "Správa bola úspešne odoslaná.",
+      formPrivacyRequired:
+        "Pred odoslaním je potrebné potvrdiť spracovanie osobných údajov.",
       formError:
         "Správu sa nepodarilo odoslať. Skús to znova alebo ma kontaktuj priamo cez email.",
 
@@ -637,11 +644,16 @@ secondary2:
       formSubjectPh: "Short subject",
       formMessage: "Message",
       formMessagePh: "Write your message...",
+      formPrivacyConsentPrefix: "I agree to the processing of personal data under the",
+      formPrivacyConsentSuffix:
+        "and acknowledge that the data will be sent through Formcarry.",
       sendBtn: "Send",
 
       formSending: "Sending message...",
       formSendingButton: "Sending...",
       formSuccess: "Message sent successfully.",
+      formPrivacyRequired:
+        "Please confirm personal data processing before sending the message.",
       formError:
         "The message could not be sent. Try again or contact me directly by email.",
 
@@ -1388,6 +1400,17 @@ secondary2:
 
       const activeLanguage = getCurrentLanguage();
       const dict = translations[activeLanguage] || translations.sk;
+
+      if (privacyConsent && !privacyConsent.checked) {
+        if (formStatus) {
+          formStatus.textContent = dict.formPrivacyRequired;
+        }
+
+        privacyConsent.focus();
+        contactForm.reportValidity?.();
+        return;
+      }
+
       const formData = new FormData(contactForm);
 
       if (sendBtn) {

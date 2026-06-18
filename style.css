@@ -1370,6 +1370,37 @@ textarea.input {
   min-height: 110px;
 }
 
+.consent-check {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: .7rem;
+  align-items: flex-start;
+  padding: .8rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  background: rgba(255,255,255,0.025);
+  color: var(--txt2);
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+[data-theme="light"] .consent-check {
+  background: rgba(0,0,0,0.025);
+}
+
+.consent-check input {
+  width: 1rem;
+  height: 1rem;
+  margin-top: .18rem;
+  accent-color: var(--accent);
+}
+
+.consent-check .link {
+  display: inline;
+  font-size: inherit;
+  color: var(--accent);
+}
+
 #sendBtn {
   align-self: flex-start;
 }

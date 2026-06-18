@@ -777,6 +777,15 @@
                 <textarea class="input" name="message" rows="5" placeholder="Napíš správu..." required data-i18n-attr="placeholder:formMessagePh"></textarea>
               </label>
 
+              <label class="consent-check">
+                <input id="privacyConsent" name="privacy_consent" type="checkbox" value="yes" required />
+                <span>
+                  <span data-i18n="formPrivacyConsentPrefix">Súhlasím so spracovaním osobných údajov podľa dokumentu</span>
+                  <a class="link" href="privacy.html" target="_blank" rel="noopener" data-i18n="privacyLink">Ochrana osobných údajov</a>
+                  <span data-i18n="formPrivacyConsentSuffix">a beriem na vedomie odoslanie údajov cez Formcarry.</span>
+                </span>
+              </label>
+
               <button class="btn" id="sendBtn" type="submit" data-i18n="sendBtn">Odoslať</button>
               <p class="muted tiny form-status" id="formStatus" aria-live="polite"></p>
             </form>
@@ -837,6 +846,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=20260618-1" defer></script>
+  <script src="app.js?v=20260618-2" defer></script>
 </body>
 </html>
