@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
       viewCert: "Zobraziť certifikát",
 
-      educationTitle: "Vzdelanie v umelej inteligencii",
+      educationTitle: "Vzdelanie",
 
     universityWhen: "2024 – súčasnosť\n2. ročník",
     universitySchool:
@@ -572,7 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
       availablePortfolio2: "Available in the portfolio repository",
       availableRepo: "Available in repository folders",
 
-      educationTitle: "Artificial Intelligence Education",
+      educationTitle: "Education",
 
 universityWhen: "2024 – present\n2nd year",
 universitySchool:
