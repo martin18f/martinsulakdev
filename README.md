@@ -27,7 +27,7 @@
 
 I am an Artificial Intelligence student at the Faculty of Electrical Engineering and Informatics, Technical University of Košice, Slovakia.
 
-I focus on practical technical projects across software development, artificial intelligence, and engineering-oriented technologies. My work combines academic knowledge with hands-on implementation through personal projects, school assignments, experiments, and technical solutions.
+I focus on practical technical projects across software development, artificial intelligence, and engineering-oriented technologies. My work combines academic knowledge with hands-on implementation through personal projects, school assignments, experiments, technical solutions, and job-related technical assignments.
 
 I enjoy building projects that connect software engineering, AI, and practical real-world applications.
 
@@ -74,7 +74,7 @@ I enjoy building projects that connect software engineering, AI, and practical r
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=html,css,javascript,react,python,java,c,mysql,matlab,vscode,git,github" />
+<img src="https://skillicons.dev/icons?i=html,css,javascript,react,python,java,c,cs,dotnet,mysql,matlab,vscode,git,github" />
 
 </div>
 
@@ -83,6 +83,7 @@ I enjoy building projects that connect software engineering, AI, and practical r
 | Category | Technologies |
 |---|---|
 | Frontend | HTML, CSS, JavaScript, React |
+| Desktop / Backend | C#, .NET, WPF, ASP.NET Core |
 | Programming | Python, Java, C |
 | Databases | MySQL / SQL |
 | Engineering | MATLAB, Simulink |
@@ -98,6 +99,8 @@ This repository serves as a growing collection of:
 - Academic projects
 - AI and ML implementations
 - Web applications
+- Desktop and backend applications
+- Job-related technical assignments
 - Control systems projects
 - IoT-related work
 - Certifications
@@ -116,8 +119,8 @@ Additional information about projects can be found inside the corresponding fold
   Websites, web applications, frontend work
 </td>
 <td align="center" width="33%">
-  <b>Neural Network Projects</b><br>
-  Deep learning and neural network experiments
+  <b>Desktop / Backend Projects</b><br>
+  C#, WPF, ASP.NET Core and database applications
 </td>
 <td align="center" width="33%">
   <b>Machine Learning Projects</b><br>
@@ -150,6 +153,7 @@ Additional information about projects can be found inside the corresponding fold
 | Job Project | Autoškola Roka | Driving school website project | [Live Website](https://www.autoskolaroka.sk/) |
 | Personal Project | Fuely | Fuel cost calculator web application | [Repository](https://github.com/martin18f/fuely) • [Live Demo](https://fuely.martinsulak.dev/) |
 | Commercial Project | Desktop Web Widget | Windows app for pinning interactive web widgets on the desktop | [Product Website](https://desktop-web-widget.martinsulak.dev/) • [Buy on Gumroad](https://martinsulak.gumroad.com/l/desktop-web-widget) |
+| Job Assignment | LocalRealtimeChatAdvanced | Advanced C# WPF chat application created from a job technical assignment, extended with native WebSocket communication, ASP.NET Core backend, MySQL storage, online users, typing indicator and improved UI | [Repository](https://github.com/martin18f/LocalRealtimeChatAdvanced) |
 | Academic Project | Speech Stress Detection | Neural network project for speech-based stress detection | [Repository](https://github.com/adrianzbur/ns-projekt-dsrs) |
 | Academic Project | UAV Control System | UAV simulation and fuzzy control project | Available in this repository |
 | Academic Project | Machine Learning Project | Machine learning academic project and experiments | Available in this repository |
@@ -169,6 +173,7 @@ Certifications and completed courses are available inside the repository.
 - Advanced AI and ML concepts
 - Neural networks and deep learning
 - Modern frontend technologies
+- C#, .NET, WPF and backend development
 - Control systems and simulations
 - Software engineering practices
 
@@ -193,6 +198,7 @@ Certifications and completed courses are available inside the repository.
 </p>
 
 - Portfolio: [martinsulakdev](https://martinsulak.dev/)
+- GitHub: [martin18f](https://github.com/martin18f)
 - LinkedIn: www.linkedin.com/in/martin-šulak-bb9529231
 
 ---
