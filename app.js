@@ -289,6 +289,12 @@ document.addEventListener("DOMContentLoaded", () => {
       desktopWidgetProductSite: "Produktová stránka",
       desktopWidgetBuyGumroad: "Kúpiť na Gumroad",
 
+      localChatDesc:
+        "Rozšírená lokálna chatovacia aplikácia v C#, WPF, ASP.NET Core a MySQL s natívnou WebSocket komunikáciou.",
+      localChat1: "Real-time komunikácia medzi viacerými WPF klientmi",
+      localChat2: "Online používatelia, typing indicator a chatové bubliny",
+      localChat3: "MySQL databáza, Entity Framework Core a typovaný WebSocket protokol",
+
       stressTitle: "Detekcia stresu z reči",
       stressDesc:
         "Projekt s neurónovou sieťou zameraný na detekciu stresu z rečových dát pomocou neuronových sietí a audio príznakov.",
@@ -539,6 +545,12 @@ document.addEventListener("DOMContentLoaded", () => {
       desktopWidget3: "Product website, QR payment and Gumroad checkout",
       desktopWidgetProductSite: "Product Website",
       desktopWidgetBuyGumroad: "Buy on Gumroad",
+
+      localChatDesc:
+        "Advanced local chat application built with C#, WPF, ASP.NET Core and MySQL using native WebSocket communication.",
+      localChat1: "Real-time communication between multiple WPF clients",
+      localChat2: "Online users, typing indicator and chat bubbles",
+      localChat3: "MySQL database, Entity Framework Core and typed WebSocket protocol",
 
       stressTitle: "Speech Stress Detection",
       stressDesc:
