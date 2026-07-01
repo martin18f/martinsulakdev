@@ -153,7 +153,7 @@ Additional information about projects can be found inside the corresponding fold
 | Job Project | Autoškola Roka | Driving school website project | [Live Website](https://www.autoskolaroka.sk/) |
 | Personal Project | Fuely | Fuel cost calculator web application | [Repository](https://github.com/martin18f/fuely) • [Live Demo](https://fuely.martinsulak.dev/) |
 | Commercial Project | Desktop Web Widget | Windows app for pinning interactive web widgets on the desktop | [Product Website](https://desktop-web-widget.martinsulak.dev/) • [Buy on Gumroad](https://martinsulak.gumroad.com/l/desktop-web-widget) |
-| Job Assignment / Portfolio Project | LocalRealtimeChatAdvanced | Advanced C# WPF chat application created from a job technical assignment, extended with native WebSocket communication, ASP.NET Core backend, MySQL storage, online users, typing indicator and improved UI | [Repository](https://github.com/martin18f/LocalRealtimeChatAdvanced) |
+| Job Assignment | LocalRealtimeChatAdvanced | Advanced C# WPF chat application created from a job technical assignment, extended with native WebSocket communication, ASP.NET Core backend, MySQL storage, online users, typing indicator and improved UI | [Repository](https://github.com/martin18f/LocalRealtimeChatAdvanced) |
 | Academic Project | Speech Stress Detection | Neural network project for speech-based stress detection | [Repository](https://github.com/adrianzbur/ns-projekt-dsrs) |
 | Academic Project | UAV Control System | UAV simulation and fuzzy control project | Available in this repository |
 | Academic Project | Machine Learning Project | Machine learning academic project and experiments | Available in this repository |
